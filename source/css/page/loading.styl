@@ -1,0 +1,34 @@
+#loading-box 
+  position: fixed
+  z-index: 100
+  size: 100%
+  background-color: rgba(0, 0, 0, 0.7)
+  transition: opacity  0.8s
+  .wave
+    display: flex
+    justify-content: center
+    align-items: center
+    size: 100%
+    .wave-child
+      size: 12px 38px
+      margin-right: 6px
+      background-color: #fc6423
+      animation: kf-wave 0.5s ease-in-out infinite alternate
+    .wave2
+      animation-delay: 0.1s
+    .wave3
+      animation-delay: 0.2s
+    .wave4
+      animation-delay: 0.3s
+    .wave5
+      animation-delay: 0.4s
+
+.loaded
+  opacity: 0
+  pointer-events: none
+
+@keyframes kf-wave
+  0%
+    transform: scaleY(1)
+  100%
+    transform: scaleY(2)

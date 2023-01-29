@@ -1,0 +1,13 @@
+  <% if(page.total > 1) { %>
+  <nav class="pagination">
+    <% if (page.prev !== 0) { %>
+    <a class="iconfont icon-chevron-left" href="/<%= url_for(page.prev_link) %>"></a>
+    <% } %>
+
+    <%- paginator({total: page.total, prev_next: false, space: '...', page_class: 'page-num', current_class: 'current'}) %>
+
+    <% if (page.next !== 0) { %>
+    <a class="iconfont icon-chevron-right" href="/<%= url_for(page.next_link) %>"></a>
+    <% } %>
+  </nav>
+  <% } %>

@@ -1,0 +1,83 @@
+.aside-wrapper 
+    size: 30% auto
+    min-width: 250px
+    margin-left: 20px
+    .aside-content
+      position: sticky
+      top: 80px
+      .aside-card 
+        overflow-y: auto
+        size: 100% auto
+        max-height: 85vh
+        padding: 20px
+        margin-bottom: 20px
+        border-radius: 10px
+        background: $black-dim
+        .aside-card-title
+          flex-box(row, flex-start, center)
+          padding-bottom: 1.4rem
+          font-size: 1.6rem
+          font-weight: $blod
+          .iconfont
+            margin-right: 6px
+            font-size: 2rem
+      .post-toc
+        .toc-link
+          position: relative
+          display: block
+          padding-left: 10px
+          transition: all 0.6s
+          line-height: 3.2rem
+          &:hover
+            color: $orange
+        .toc-text
+          word-break: break-all
+        .toc-child
+          overflow: hidden
+          size: 0
+        .toc-child
+          &:has(.toc-active)
+            size: auto
+        .toc-item
+          padding-left: 3px
+          &:hover
+            .toc-child
+              size(auto)
+        .toc-child li
+          padding-left: 16px
+        .toc-active
+          background-color: $black-deeper
+          color: $orange
+          &::before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            size: 4px 100%
+            background-color: $orange
+      .latest-posts
+        .latest-post-list
+          .latest-post
+            margin-bottom: 10px
+            .post-link
+              flex-box()
+              .post-cover
+                size(4em)
+                margin-right: 10px
+                object-fit: cover
+              .post-info
+                flex-box(column, center)
+                .title
+                  muti-colum-ellipsis()
+                .time
+                  padding: 0.3em 0
+                  font-size: 1.2rem
+                  color: $grey
+
+
+@media only screen and (max-width: 1000px) {
+  .aside-wrapper {
+    display: none
+  }
+}
+

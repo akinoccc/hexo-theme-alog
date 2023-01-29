@@ -1,0 +1,16 @@
+<section class="aside-wrapper">
+  <aside class="aside-content">
+    <div class="aside-card post-toc">
+      <header class="aside-card-title">
+        <span class="iconfont icon-toc"></span><%= __("post.toc")  %>
+      </header>
+      <%- toc(page.content, { class_link: 'toc-link', class_text: 'toc-text', class_child: 'toc-child' }) %>
+    </div>
+    <div class="aside-card latest-posts">
+      <header class="aside-card-title">
+        <span class="iconfont icon-history"></span><%= __("post.lastest")  %>
+      </header>
+      <%- list_latest_posts() %>
+    </div>
+  </aside>
+</section>

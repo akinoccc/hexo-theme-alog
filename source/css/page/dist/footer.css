@@ -1,0 +1,12 @@
+.page-footer span {
+  text-align: center;
+  color: $grey-light;
+  font-size: 1.2rem;
+}
+.page-footer span:first-child {
+  margin-bottom: 6px;
+}
+.page-footer span a {
+  color: $gainsboro;
+  border-bottom: 1px solid $gainsboro;
+}

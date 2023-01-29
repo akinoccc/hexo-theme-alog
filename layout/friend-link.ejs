@@ -1,0 +1,15 @@
+<div class="page-link-container">
+  <div class="card animate__animated animate__fadeInDown">
+    <h1><%= site.data.friend_link.title %></h1>
+    <%- list_friend_link(site.data.friend_link.link_list) %>
+  </div>
+  <div class="card animate__animated animate__fadeInUp">
+    <h1><%= __("friend_link.site_info") %></h1>
+    <div class="site-info markdown">
+      <p><%= __("friend_link.apply_label.name") %>: <%= site.data.friend_link.site_info.name %></p>
+      <p><%= __("friend_link.apply_label.link") %>: <%= site.data.friend_link.site_info.link %></p>
+      <p><%= __("friend_link.apply_label.icon") %>: <%= site.data.friend_link.site_info.icon %></p>
+    </div>
+    <%- partial("_partial/comment.ejs", { show_divide: true, show_header: true }) %>
+  </div>
+</div>

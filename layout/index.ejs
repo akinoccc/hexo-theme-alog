@@ -1,0 +1,60 @@
+<div class="page-home-container">
+  <% if(is_home()) { %>
+  <div class="img-player  animate__animated animate__fadeInDown">
+    <div class="shutter">
+      <div class="shutter-img">
+        <%- list_recommendation() %>
+      </div>
+      <ul class="shutter-btn">
+        <li class="prev"></li>
+        <li class="next"></li>
+      </ul>
+      <div class="shutter-desc">
+        <p></p>
+      </div>
+    </div>
+  </div>
+  <% } else { %>
+  <%- partial("_partial/page-header.ejs") %>
+  <% } %>
+  <div class="post-list-wrapper animate__animated animate__fadeInUp">
+    <ul class="post-list">
+      <% page.posts.forEach((item) => { %>
+      <li class="post-card <%= is_home() && item.top ? "top" : "" %>">
+        <div class="post-cover-wrapper">
+          <% if(item.cover) { %>
+          <a class="post-cover" style="background-image: url(<%=item.cover%>);" href="<%= url_for(item.path) %>">
+            <div class="overlay"></div>
+          </a>
+          <% } else { %>
+          <a class="post-cover no-post-cover" style="background-image: url(/images/no-cover.png);" href="<%= url_for(item.path) %>">
+            <div class="overlay"></div>
+          </a>
+          <% } %>
+        </div>
+        <div class="post-info">
+          <div class="top-box">
+            <a class="post-title" href="<%= url_for(item.path) %>">
+              <%=item.title %>
+            </a>
+            <p class="post-desc">
+              <%= strip_html(truncate(item.content, {length: 200})) %>
+            </p>
+          </div>
+          <div class="bottom-box">
+            <%- list_categories(item.categories, { show_count: false, class: 'post-category', depth: -1 }) %>
+            <div class="post-publish-time">
+              <span><%= date(item.date, 'M/D, YYYY') %> </span>
+              <span class="iconfont icon-eye"> 1230</span>
+            </div>
+          </div>
+      </li>
+      <% }) %>
+    </ul>
+    <%- partial("_partial/pagination.ejs") %>
+  </div>
+</div>
+
+<%- js({ src: "js/plugin/velocity.js", defer: true }) %>
+<%- js({ src: "js/plugin/shutter.js", defer: true }) %>
+<%- js({ src: "js/page/home.js", defer: true }) %>

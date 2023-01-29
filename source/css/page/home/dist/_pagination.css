@@ -1,0 +1,22 @@
+/* pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.page-num {
+  margin: 0 5px;
+}
+.current {
+  display: inline-block;
+  border-radius: 2px;
+  background-color: $orange;
+  line-height: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.pagination .iconfont {
+  color: $whitesmoke;
+  font-weight: $blod;
+}

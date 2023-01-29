@@ -1,0 +1,13 @@
+<div class="side-menu-container animate__animated animate__faster">
+  <ul class="menu animate__animated animate__faster">
+    <%- list_menu(site.data.menu) %>
+    <li class="category-menu-wrapper">
+      <div class="menu-item-name">
+        <span><%= __("header.category") %></span>
+        <span class="iconfont icon-chevron-bottom"></span>
+      </div>
+      <%- list_categories(site.categories, { class: "category-menu", show_count: false }) %>
+    </li>
+    <li class="iconfont icon-close-circle"></li>
+  </ul>
+</div>

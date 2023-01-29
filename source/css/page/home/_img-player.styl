@@ -1,0 +1,59 @@
+.img-player
+  size(100%, auto)
+  overflow: hidden
+  position: relative
+  max-width: 100%
+  min-height: 240px
+  max-height: 500px
+  aspect-ratio: 1.9
+  padding: 20px 6%
+  background-color: rgba(44, 44, 44, 0.6)
+
+  .shutter
+    overflow: hidden
+    position: relative
+    box-sizing: border-box
+    box-shadow: 0 10px 50px $black-light
+
+    .shutter-img
+      z-index: 1
+
+    .shutter-img
+    .shutter-img a
+      size(100%)
+      position: absolute
+      left: 0
+      top: 0
+      img
+        size(100%)
+        border-radius: 6px
+        object-fit: cover
+
+    .shutter-btn 
+      li
+        size(49px)
+        position: absolute
+        z-index: 2
+        top: 50%
+        margin-top: -25px
+        cursor: pointer
+      .prev
+        left: 20px
+        background: url(/images/shutter_prevBtn.png) no-repeat 0 -49px
+      .next
+        right: 20px
+        background: url(/images/shutter_nextBtn.png) no-repeat 0 -49px
+
+    .shutter-desc
+      size(100%, 36px)
+      position: absolute
+      z-index: 2
+      left: 0
+      bottom: 0
+      border-radius: 0 0 $border-radius-base $border-radius-base
+      background: url(/images/shutter_shadow.png) repeat
+      p
+        ellipsis()
+        padding: 0 20px
+        line-height: 36px
+        font-size: 16px

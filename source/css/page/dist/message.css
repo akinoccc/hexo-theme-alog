@@ -1,0 +1,8 @@
+.page-message-container {
+  padding: $page-padding;
+}
+.page-message-container .message-wrapper {
+  padding: $comment-padding;
+  background-color: $black-dim;
+  border-radius: $border-radius-base;
+}

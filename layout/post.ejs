@@ -1,0 +1,42 @@
+<div class="page-post-container animate__animated animate__fadeIn">
+  <section class="post-wrapper">
+    <header class="post-header">
+      <% if(page.cover) { %>
+      <img class="post-cover" src="<%= page.cover %>" alt="<%= page.title %>">
+      <% } %>
+      <span class="post-title"><%= page.title %></span>
+      <div class="post-publish-info-wrapper flex">
+        <img class="author-avatar" src="/images/avatar.jpg" alt="">
+        <div class="post-info flex flex-column flex-space-around">
+          <div>
+            <%- config.author %>
+            <span>· <%- date(page.date, "M/D, YYYY") %> · </span>
+            <span id="<%= url_for(page.path) %>" class="leancloud_visitors" data-flag-title="<%= page.title %>">
+              <%= __("post.pv") %>
+              <% if(theme.busuanzi && theme.busuanzi.enable) { %>
+              <span id="busuanzi_value_site_pv"></span>
+              <% } else if(theme.valine && theme.valine.enable) { %>
+              <span class="leancloud-visitors-count"></span>
+              <% } %>
+            </span>
+          </div>
+          <%- list_categories(page.categories, { show_count: false, class: 'category', depth: -1 }) %>
+        </div>
+        </span>
+      </div>
+    </header>
+    <article class="post-content markdown">
+      <!-- <a name="index" style=" position: relative;top: -120px;display: block;height: 0;overflow: hidden;"></a> -->
+      <%- page.content %>
+    </article>
+    <%- list_tags(page.tags, { show_count: false, class: { ul: "tags", li: "tag", a: "tag-link" } }) %>
+    <%- partial("_partial/post/prev_next.ejs") %>
+    <% if(page.comment !== false) { %>
+    <%- partial("_partial/comment.ejs", { show_divide: true, show_header: true }) %>
+    <% } %>
+  </section>
+  <%- partial("_partial/post/aside.ejs") %>
+</div>
+
+<%- partial("_partial/post/img-preview.ejs") %>
+<%- js({ src: "js/page/post/index.js", type: "module", defer: true }) %>

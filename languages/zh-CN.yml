@@ -1,0 +1,26 @@
+header:
+  category: 分类
+
+post:
+  pv: 阅读
+  toc: 目录
+  lastest: 最新推荐
+  pre: 上一篇
+  next: 下一篇
+
+friend_link:
+  site_info: 本站信息
+  apply_label:
+    name: 名称
+    link: 链接
+    icon: 图标
+
+comment:
+  header_title: 评论
+
+search:
+  title: 本地搜索
+  result_title: ${resultNum} 条结果
+  placeholder: 请输入关键字
+  no_result: 搜索不到呢~
+  tips: 搜索

@@ -1,0 +1,57 @@
+.post-prev-next {
+  size: 100% auto;
+}
+.post-prev-next .link-wrapper {
+  overflow: hidden;
+  position: relative;
+  size: 49% auto;
+  min-height: 120px;
+  border-radius: 10px;
+  aspect-ratio: 3;
+}
+.post-prev-next .link-wrapper .link-cover {
+  display: block;
+  size: auto 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  cursor: pointer;
+  transition: all 0.8s;
+}
+.post-prev-next .link-wrapper .link-cover .overlay {
+  size: 100%;
+  background-color: rgba(0,0,0,0.5);
+  transition: all 0.8s;
+  opacity: 0.5;
+}
+.post-prev-next .link-wrapper .link-cover .overlay:hover {
+  opacity: 1;
+}
+.post-prev-next .link-wrapper .link-cover:hover {
+  scale: 1.1;
+}
+.post-prev-next .link-text {
+  position: absolute;
+  top: 0;
+  size: 100%;
+  padding: 5% 10%;
+  cursor: pointer;
+  pointer-events: none;
+}
+.post-prev-next .link-text .link-title {
+  margin-top: 10px;
+  font-size: 2rem;
+  font-weight: $blod;
+}
+@media only screen and (max-width: 700px) {
+  .post-prev-next .link-wrapper {
+    size: 100% auto !important;
+    aspect-ratio: 4 !important;
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .post-prev-next .link-wrapper {
+    aspect-ratio: 3 !important;
+  }
+}

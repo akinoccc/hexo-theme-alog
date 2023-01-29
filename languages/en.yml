@@ -1,0 +1,26 @@
+header:
+  category: Category
+
+post:
+  pv: PV
+  toc: Toc
+  lastest: Lastest
+  pre: Pre
+  next: Next
+
+friend_link:
+  site_info: Site Info
+  apply_label:
+    name: Name
+    link: Link
+    icon: Icon
+
+comment:
+  header_title: Comment
+
+search:
+  title: Local search
+  result_title: ${resultNum} results found
+  placeholder: Please input keyword
+  no_result: No result
+  tips: Start your search

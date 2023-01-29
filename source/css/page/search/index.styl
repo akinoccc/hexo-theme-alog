@@ -1,0 +1,101 @@
+.search-pop-overlay
+  overflow: hidden
+  position: fixed
+  top: 50%
+  left: 50%
+  z-index: 13
+  display: none
+  size: 100%
+  background-color: rgba(44, 44, 44, 0.85)
+  transform: translate(-50%, -50%)
+  .popup
+    size: 60% auto
+    margin: 10% auto 0
+    padding: 0 20px 20px
+    border-radius: $border-radius-base
+    background-color: $black-deep
+    box-sizing: content-box
+    color: $grey-lighter
+    .search-header
+      .search-title 
+        flex-box(row, space-between, center)
+        line-height: 60px
+        .popup-btn-close
+          font-size: 2.4rem
+          font-weight: $blod
+          cursor: pointer
+      .search-input-container
+        .search-input
+          size: 100% 50px
+          padding: 10px
+          border-radius: $border-radius-base
+          background-color: $black-light
+          color: $grey-lighter
+          font-size: 16px
+          // &::-webkit-search-cancel-button
+            // background: url("custome-clear.png") no-repeat center;
+            // background-size: 100% 100%;
+            // color: #fff
+    .search-result-container
+      margin-top: 10px
+      border-radius: $border-radius-base
+      background-color: $black-dim
+      hr
+        margin: 0
+      .search-stats
+        size: auto 50px
+        padding: 0 10px
+        line-height: 50px
+      .search-result-list
+        overflow-y: auto
+        size: auto 300px
+        padding: 2px 28px
+        list-style: circle
+        li
+          padding: 8px 0
+          &:hover
+            color: $whitesmoke
+          &:not(:last-child)
+            border-bottom: 1px dashed #dddddd
+          .search-result-title
+            margin-bottom: 2px
+            font-weight: $blod
+          .search-keyword
+            background-color: $orange
+          a
+            display: block
+            size: 100% auto
+          a, p
+            line-height: 24px
+            color: inherit
+    .no-result
+      .search-result-icon
+        size: 100%
+        min-height: 300px
+        .iconfont
+          font-size: 6rem
+          margin-bottom: 10px
+
+.search-active
+  overflow: hidden
+
+@media only screen and (max-width: 750px) 
+  .search-pop-overlay
+    background-color: rgba(44, 44, 44, 1)
+    .popup
+      size: 100%
+      margin: 0
+      padding: 0
+      border-radius: 0
+      .search-header
+        .search-title 
+          padding: 0 10px
+        .search-input-container
+          .search-input
+            border-radius: 0
+      .search-result-container
+        height: calc(100% - 100px)
+        margin-top: 0
+        border-radius: 0
+        .search-result-list
+          height: calc(100% - 50px)

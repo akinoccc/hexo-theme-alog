@@ -1,0 +1,54 @@
+.post-prev-next
+  flex-box(row, space-between, stretch, wrap)
+  size: 100% auto
+  .link-wrapper
+    overflow: hidden
+    position: relative
+    size: 49% auto
+    min-height: 120px
+    border-radius: 10px
+    aspect-ratio: 3
+    .link-cover
+      display: block
+      size: auto 100%
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center center
+      cursor: pointer
+      transition: all 0.8s
+      .overlay 
+        size: 100%
+        background-color: rgba(0, 0, 0, 0.5)
+        transition: all 0.8s
+        opacity: 0.5
+      .overlay:hover 
+        opacity: 1
+    .link-cover:hover 
+      scale: 1.1
+  .link-text
+    flex-box(column, center)
+    position: absolute
+    top: 0
+    size: 100%
+    padding: 5% 10%
+    cursor: pointer
+    pointer-events: none
+    .link-title 
+      muti-colum-ellipsis()
+      margin-top: 10px
+      font-size: 2rem
+      font-weight: $blod
+
+@media only screen and (max-width: 700px) {
+  .post-prev-next .link-wrapper {
+    size: 100% auto !important
+    aspect-ratio: 4 !important
+    margin-bottom: 20px
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .post-prev-next .link-wrapper {
+    aspect-ratio: 3 !important
+  }
+}

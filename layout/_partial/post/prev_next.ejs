@@ -1,0 +1,36 @@
+<div class="post-prev-next">
+  <% if(page.prev) { %>
+  <div class="link-wrapper">
+    <% if(page.prev.cover) { %>
+    <a style="background-image: url(<%=url_for(page.prev.cover)%>);" class="link-cover" href="<%= url_for(page.prev.path) %>">
+      <div class="overlay"></div>
+    </a>
+    <% } else { %>
+    <a style="background-image: url(/images/no-cover.png);" class="link-cover" href="<%= url_for(page.prev.path) %>">
+      <div class="overlay"></div>
+    </a>
+    <% } %>
+    <div class="link-text">
+      <span><%= __("post.pre") %></span>
+      <span class="link-title"><%= page.prev.title %></span>
+    </div>
+  </div>
+  <% } %>
+  <% if(page.next) { %>
+  <div class="link-wrapper">
+    <% if(page.next.cover) { %>
+    <a style="background-image: url(<%=url_for(page.next.cover)%>);" class="link-cover" href="<%= url_for(page.next.path) %>">
+      <div class="overlay"></div>
+    </a>
+    <% } else { %>
+    <a style="background-image: url(/images/no-cover.png);" class="link-cover" href="<%= url_for(page.next.path) %>">
+      <div class="overlay"></div>
+    </a>
+    <% } %>
+    <div class="link-text">
+      <span><%= __("post.next") %></span>
+      <span class="link-title"><%= page.next.title %></span>
+    </div>
+  </div>
+  <% } %>
+</div>

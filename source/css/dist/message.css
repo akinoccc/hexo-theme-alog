@@ -1,0 +1,4 @@
+.message-container {
+  padding: $page-padding;
+  background-color: #111;
+}

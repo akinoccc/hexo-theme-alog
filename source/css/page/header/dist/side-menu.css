@@ -1,0 +1,56 @@
+.side-menu-container {
+  position: fixed;
+  z-index: 4;
+  visibility: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(44,44,44,0.7);
+}
+.side-menu-container .menu {
+  position: relative;
+  size: 280px 100%;
+  padding: 60px 20px;
+  background-color: $black;
+}
+.side-menu-container .menu .category-menu-wrapper {
+  overflow: hidden;
+}
+.side-menu-container .menu .category-menu-wrapper .menu-item-name {
+  padding: 15px;
+}
+.side-menu-container .menu .category-menu-wrapper .menu-item-name .iconfont {
+  transition: all 0.9s;
+  transform: rotateZ(0deg);
+}
+.side-menu-container .menu .category-menu-wrapper .category-menu-list {
+  max-height: 0;
+  padding: 0 15px;
+  transition: all 0.8s;
+}
+.side-menu-container .menu .category-expand .menu-item-name .iconfont {
+  transform: rotateZ(180deg);
+}
+.side-menu-container .menu .category-expand .category-menu-list {
+  max-height: 500px;
+}
+.side-menu-container .menu li {
+  cursor: pointer;
+}
+.side-menu-container .menu li:not([class~='iconfont']) {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: $black-deep;
+}
+.side-menu-container .menu li:not([class~='iconfont']) a {
+  display: block;
+  padding: 15px 15px;
+}
+.side-menu-container .menu li:not([class~='category-menu-wrapper']):hover {
+  background-color: $black-deeper;
+}
+.side-menu-container .menu .icon-close-circle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2.4rem;
+}

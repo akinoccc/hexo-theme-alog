@@ -1,0 +1,22 @@
+<% if(theme.valine && theme.valine.enable) { %>
+<% if(show_divide) { %>
+<div class="divide"></div>
+<% } %>
+<% if(show_header) { %>
+<div class="iconfont icon-comment"><span><%= __("comment.header_title") %></span></div>
+<% } %>
+<div id="comment" class="comment markdown"></div>
+<script>
+  new Valine({
+    el: '#comment',
+    appId: '<%= theme.valine.appId %>',
+    appKey: '<%= theme.valine.appKey %>',
+    avatar: '<%= theme.valine.avatar %>',
+    placeholder: '<%= theme.valine.placeholder %>',
+    pageSize: <%- theme.valine.pageSize %>,
+    visitor: <%= theme.valine.visitor %>,
+    recordIP: <%= theme.valine.recordIP %>,
+    lang: "<%= config.language %>"
+  });
+</script>
+<% } %>

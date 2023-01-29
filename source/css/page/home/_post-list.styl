@@ -1,0 +1,110 @@
+.category-wrapper 
+  margin: 40px 0
+  .category-list 
+    font-weight: $blod
+    li 
+      margin-right: 20px
+      font-size: 1.8rem
+      cursor: pointer
+
+.post-list-wrapper 
+  size(100%, auto)
+  padding: $page-padding
+
+.post-list 
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr 1fr
+  grid-row-gap: 20px
+  grid-column-gap: 20px
+  .top::before
+    size(40px)
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 12
+    background-image: url(/icons/top.svg)
+    background-size: 100% 100%
+  .post-card 
+    flex-box(column)
+    size(100%, auto)
+    overflow: hidden
+    position: relative
+    border-radius: $border-radius-base
+    background-color: $black-deep
+    .post-cover-wrapper 
+      size(100%, auto)
+      overflow: hidden
+      aspect-ratio: 1.9
+      .post-cover 
+        size(100%)
+        overflow: hidden
+        position: relative
+        display: block
+        border-radius: $border-radius-base $border-radius-base 0 0
+        background-repeat: no-repeat
+        background-size: cover
+        cursor: pointer
+        transition: all 0.8s
+        .overlay 
+          size(100%)
+          position: absolute
+          z-index: 10
+          background-color: rgba(0, 0, 0, 0.4)
+          transition: all 0.8s
+          opacity: 0
+          &:hover 
+            opacity: 1
+    &:hover 
+      .post-cover
+        transform: scale(1.1)
+    .post-info 
+      flex-box(column, space-between)
+      flex: 1
+      padding: 12px 16px
+      .top-box 
+        .post-title 
+          muti-colum-ellipsis()
+          font-size: 1.8rem
+          font-weight: $blod
+          &:hover 
+            color: $orange
+        .post-desc 
+          ellipsis()
+          margin-top: 8px
+          color: $grey-light
+          cursor: default
+      .post-category-list 
+        flex-box()
+        size(100%, auto)
+        margin: 10px 0
+        .post-category-list-item 
+          flex-box(center, center)
+          margin-right: 6px
+          padding: 4px 8px
+          border-radius: 4px
+          background-color: rgba(46, 75, 111, 0.5)
+          border-radius: 2px
+          transition: all 0.4s
+          cursor: pointer
+          .post-category-list-link 
+            color: $purple
+            font-size: 1.2rem
+          &:hover 
+            background-color: $purple
+            .post-category-list-link 
+              color: $whitesmoke
+      .post-publish-time 
+        flex-box(row, space-between)
+        font-size: 1.2rem
+        color: $grey-light
+        .iconfont 
+          font-size: 1.2rem
+
+@media only screen and (max-width: 1000px) 
+  .post-list 
+    grid-template-columns: 1fr 1fr
+
+@media only screen and (max-width: 500px) 
+  .post-list 
+    grid-template-columns: 1fr

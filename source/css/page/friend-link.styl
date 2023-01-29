@@ -1,0 +1,99 @@
+.page-link-container 
+  padding: $page-padding
+  .card
+    min-width: 250px
+    padding: 25px
+    margin-bottom: 25px
+    border-radius: $border-radius-base
+    background-color: $black-dim
+    .site-info
+      margin: 25px 0
+      padding: 15px 20px
+      border-radius: $border-radius-base
+      background-color $black-light
+      word-break: break-all
+    .friend-link-list
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      grid-row-gap: 20px
+      grid-column-gap: 20px
+      margin-top: 25px
+      .friend-link-item
+        overflow: hidden
+        position: relative
+        border: 1px solid $grey-lighter
+        border-radius: $border-radius-base
+        transition: all 1s
+        cursor: pointer
+        &:hover
+          background-color: rgba(0, 0, 0, 0.5)
+          border-color: transparent
+          // &::before
+          //   content: ''
+          //   position: absolute
+          //   left: -50%
+          //   top: -50%
+          //   width: 200%
+          //   height: 200%
+          //   background: conic-gradient(transparent, rgba(168, 239, 255, 1), transparent 30%)
+          //   animation: rotate 4s linear infinite
+          &::before
+          &::after
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            border: 2px solid $grey-lighter
+          &::before
+            animation: clippath 3s infinite linear
+          &::after
+            animation: clippath-reverse 3s infinite linear
+        a
+          padding: 20px
+        img
+          size: 44px
+          margin-right: 10px
+          border-radius: 50%
+        .right-box 
+          overflow: hidden
+          .friend-name
+            font-size: 1.6rem
+            font-size: $blod
+          .friend-desc
+            font-size: 1.2rem
+
+
+@media only screen and (max-width: 1100px) 
+  .friend-link-list
+    grid-template-columns: 1fr 1fr !important
+
+@media only screen and (max-width: 600px)
+  .friend-link-list
+    grid-template-columns: 1fr !important
+
+@keyframes rotate 
+  100% 
+    transform: rotate(360deg)
+
+@keyframes clippath
+  0%
+  100%
+    clip-path: inset(0 0 95% 0)
+  25%
+    clip-path: inset(0 95% 0 0)
+  50%
+    clip-path: inset(95% 0 0 0)
+  75%
+    clip-path: inset(0 0 0 95%)
+@keyframes clippath-reverse
+  0%
+  100%
+    clip-path: inset(95% 0 0 0)
+  25%
+    clip-path: inset(0 0 0 95%)
+  50%
+    clip-path: inset(0 0 95% 0)
+  75%
+    clip-path: inset(0 95% 0 0)

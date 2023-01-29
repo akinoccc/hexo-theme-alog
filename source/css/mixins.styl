@@ -1,0 +1,39 @@
+disable-user-select()
+  -moz-user-select: none
+  -ms-user-select: none
+  -webkit-user-select: none
+  user-select: none
+
+flex-box($direction=row, $justify=flex-start, $align=stretch, $wrap=nowrap)
+  display: flex
+  flex-direction: $direction
+  flex-wrap: $wrap
+  justify-content: $justify
+  align-items: $align
+
+flex-len($flex)
+  flex: $flex
+
+ellipsis()
+  overflow: hidden
+  -o-text-overflow: ellipsis
+  text-overflow: ellipsis
+  white-space: nowrap
+
+muti-colum-ellipsis($n=2)
+  overflow: hidden
+  display: -webkit-box
+  -webkit-line-clamp: $n
+  -webkit-box-orient: vertical;
+  white-space: normal
+  word-break: keep-all
+  -o-text-overflow: ellipsis
+  text-overflow: ellipsis
+
+size()
+  if length(arguments) == 1
+    width: arguments[0]
+    height: arguments[0]
+  else
+    width: arguments[0]
+    height: arguments[1]

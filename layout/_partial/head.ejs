@@ -1,0 +1,33 @@
+<head>
+  <title><%- theme.title %></title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="
+      width=device-width, 
+      initial-scale=1.0, 
+      minimum-scale=1.0, 
+      maximum-scale=1.0,
+      user-scalable=no
+    " />
+
+  <%- css("css/main.css") %>
+
+  <%- js({ src: "js/lib/jquery-3.6.3.min.js", defer: true }) %>
+  <%#- js({ src: "js/plugin/pjax.min.js", defer: true }) %>
+  <%- js({ src: "js/lib/highlight.min.js", defer: true  }) %>
+  <%- js({ src: "js/main.js", type: "module", defer: true }) %>
+  <%- js({ src: "js/page/header.js", type: "module", defer: true }) %>
+  <%- js({ src: "js/page/side-menu.js", defer: true }) %>
+  <%- js({ src: "js/page/search/index.js", defer: true }) %>
+
+  <% if(theme.busuanzi.enable) { %>
+  <%- js({ src: "js/lib/valine.min.js" }) %>
+  <% } %>
+
+  <% if(theme.valine.enable) { %>
+  <%- js({ src: "js/lib/busuanzi.pure.min.js", defer: true }) %>
+  <% } %>
+
+  <% if(theme.local_search && theme.local_search.enable) { %>
+  <%- js({ src: "js/page/search/local-search.js", type: "module", defer: true  }) %>
+  <% } %>
+</head>

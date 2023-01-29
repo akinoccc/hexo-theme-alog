@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<%- partial("_partial/head") %>
+
+<body style="position: relative;">
+  <%- partial('_partial/loading') %>
+  <%- partial('_partial/bg-animation') %>
+  <%- partial("_partial/side-menu") %>
+  <%- partial("_partial/search/index") %>
+  <%- partial("_partial/header") %>
+  <main class="page-container">
+    <%- body %>
+  </main>
+  <%- partial("_partial/footer") %>
+</body>
+
+<%- export_config() %>
+
+</html>

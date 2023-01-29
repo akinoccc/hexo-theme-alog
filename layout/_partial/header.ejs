@@ -1,0 +1,23 @@
+<header class="main-header animate__animated animate__fadeInDown">
+  <a class="blogger-info flex flex-align-center" href="/">
+    <img src="/images/avatar.jpg" alt="avatar">
+    <span><%- config.title %> </span>
+  </a>
+  <nav>
+    <ul class="menu flex flex-align-center">
+      <%- list_menu(site.data.menu) %>
+      <li class="menu-category">
+        <div class="flex flex-align-center">
+          <span><%= __("header.category") %></span>
+          <span class="iconfont icon-chevron-bottom"></span>
+        </div>
+        <%- list_categories(site.categories, { class: "category-menu", show_count: false }) %>
+      </li>
+    </ul>
+  </nav>
+  <div class="right-icon flex flex-align-center">
+    <span class="search-popup-trigger iconfont icon-search"></span>
+    <span class="iconfont icon-view-list"></span>
+  </div>
+</header>
+<div class="header-slot"></div>

@@ -1,0 +1,8 @@
+.page-about-container {
+  padding: $page-padding;
+}
+.page-about-container .about-content {
+  padding: 15px 25px;
+  border-radius: 10px;
+  background-color: $black-dim;
+}
