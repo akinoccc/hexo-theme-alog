@@ -35,11 +35,40 @@ theme: alog
 
 ## 配置
 
-创建`_config.alog.yml`主题配置文件，将下面的配置复制到这个文件并按提示配置好。
+在博客根目录创建`_config.alog.yml`主题配置文件，将下面的配置复制到这个文件并按提示配置好。
 
 ```yml
-# 开启加载动画
-preload:
+# _config.alog.yml
+menu:
+  - name: Home
+    path: /
+  - name: Project
+    path: /project
+  - name: Message
+    path: /message
+  - name: Link
+    path: /friend-link
+  - name: About
+    path: /about
+
+links:
+  site_info:
+    name: Alog
+    link: https://akino.icu
+    icon: https://akino.icu/images/avatar.jpg
+  apply_tips: Apply format:\nName：xxxx\ndesc:xxx\nLink：xxx\nIcon：xxx
+  link_list:
+    - name: Akino
+      avatar: /images/avatar.jpg
+      link: https://akino.icu
+      desc: Akino's blog.
+
+footer:
+  enable: boolean
+  building_time: time string # 建站时间
+
+# 开启页面加载动画
+loading:
   enable: bolean
 
 # 开启文章阅读次数统计
@@ -63,6 +92,52 @@ local_search:
   top_n_per_article: number # 每篇文章显示的搜索匹配数量
   preload: true # 预加载数据
   trigger: auto
+```
+
+### 关于菜单及导航
+
+主题额外支持以下几种布局 `project`、`message`、`links`、`about`。
+
+如果你需要创建 `project`、`message`、`links`、`about` 这几种布局的页面，你必须在 `<blog_root_dir/source>` 下创建相应的文件。
+
+比如 `友链` 页面, 你需要创建 `links/index.md` 并且 在 `links/index.md` 文件头设置好对应的标题和布局。
+
+```yml
+---
+layout: links
+---
+```
+
+### 关于项目列表
+
+创建 `project/index.md` 并填写对应的头部之后. 你可以在该文件中填写你的项目列表，项目内容没有格式要求，只需要使用 `///` 分割每一个项目即可。
+
+#### Example
+
+```md
+---
+layout: project
+---
+
+## 项目 1
+
+项目描述：xxx
+
+- xxx...
+- xxx...
+
+链接: https://github.com/xxxx
+
+/// (👈 分割符号)
+
+## 项目 2
+
+项目描述：xxx
+
+- xxx...
+- xxx...
+
+链接: https://github.com/xxxx
 ```
 
 ## 贡献
