@@ -1,13 +1,12 @@
 # Alog
 
+> Alog is a simple and elegant hexo theme.
+
 <div style="display: flex;">
   <img style="margin-right: 10px" src="https://img.shields.io/npm/v/hexo-theme-alog" />
   <img style="margin-right: 10px" src="https://img.shields.io/npm/dw/hexo-theme-alog"/>
-  <img style="margin-right: 10px" src="https://img.shields.io/bundlephobia/min/hexo-theme-alog"/>
   <img style="margin-right: 10px" src="https://img.shields.io/github/license/vkm0303/hexo-theme-alog"/>
 </div>
-
-> Alog is a simple and elegant hexo theme.
 
 ## Document
 
