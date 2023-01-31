@@ -8,7 +8,8 @@ post:
   pre: Pre
   next: Next
 
-friend_link:
+links:
+  links_title: Links
   site_info: Site Info
   apply_label:
     name: Name

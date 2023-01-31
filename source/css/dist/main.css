@@ -421,7 +421,7 @@ textarea {
 .markdown img {
   max-width: 100%;
   max-height: 100%;
-  margin: 10px auto;
+  margin: 10px 0;
   object-fit: contain;
   cursor: pointer;
 }
@@ -475,7 +475,7 @@ textarea {
   max-width: 100%;
   min-height: 200px;
   aspect-ratio: 5;
-  background-color: rgba(39,39,39,0.5);
+  background-color: rgba(39,39,39,0.7);
 }
 .page-header .page-name {
   padding: 15px 6%;
@@ -485,13 +485,16 @@ textarea {
   font-size: 2.4rem;
   font-weight: 700;
 }
+.header-slot {
+  min-height: 60px;
+}
 .main-header {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 3;
   width: 100%;
@@ -697,10 +700,15 @@ textarea {
 .page-footer span:first-child {
   margin-bottom: 6px;
 }
+.page-footer span a {
+  color: #eee;
+  border-bottom: 1px solid #eee;
+}
 .img-player {
+  width: 100%;
+  height: auto;
   overflow: hidden;
   position: relative;
-  width: 100%;
   max-width: 100%;
   min-height: 240px;
   max-height: 500px;
@@ -719,11 +727,11 @@ textarea {
 }
 .img-player .shutter .shutter-img,
 .img-player .shutter .shutter-img a {
+  width: 100%;
+  height: 100%;
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
 }
 .img-player .shutter .shutter-img img,
 .img-player .shutter .shutter-img a img {
@@ -733,11 +741,11 @@ textarea {
   object-fit: cover;
 }
 .img-player .shutter .shutter-btn li {
+  width: 49px;
+  height: 49px;
   position: absolute;
   z-index: 2;
   top: 50%;
-  width: 49px;
-  height: 49px;
   margin-top: -25px;
   cursor: pointer;
 }
@@ -750,17 +758,21 @@ textarea {
   background: url("/images/shutter_nextBtn.png") no-repeat 0 -49px;
 }
 .img-player .shutter .shutter-desc {
+  width: 100%;
+  height: 36px;
   position: absolute;
   z-index: 2;
   left: 0;
   bottom: 0;
-  width: 100%;
-  height: 36px;
   border-radius: 0 0 6px 6px;
   background: url("/images/shutter_shadow.png") repeat;
 }
 .img-player .shutter .shutter-desc p {
-  padding-left: 20px;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 20px;
   line-height: 36px;
   font-size: 16px;
 }
@@ -778,7 +790,7 @@ textarea {
 .post-list-wrapper {
   width: 100%;
   height: auto;
-  padding: 40px;
+  padding: 40px 6%;
 }
 .post-list {
   display: grid;
@@ -787,36 +799,41 @@ textarea {
   grid-column-gap: 20px;
 }
 .post-list .top::before {
+  width: 40px;
+  height: 40px;
   content: '';
   position: absolute;
   top: 0;
   right: 0;
   z-index: 12;
-  width: 40px;
-  height: 40px;
   background-image: url("/icons/top.svg");
   background-size: 100% 100%;
 }
 .post-list .post-card {
-  overflow: hidden;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
   width: 100%;
   height: auto;
+  overflow: hidden;
+  position: relative;
   border-radius: 6px;
   background-color: #222;
 }
 .post-list .post-card .post-cover-wrapper {
-  overflow: hidden;
   width: 100%;
   height: auto;
+  overflow: hidden;
   aspect-ratio: 1.9;
 }
 .post-list .post-card .post-cover-wrapper .post-cover {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   position: relative;
   display: block;
-  width: 100%;
-  height: 100%;
   border-radius: 6px 6px 0 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -824,10 +841,10 @@ textarea {
   transition: all 0.8s;
 }
 .post-list .post-card .post-cover-wrapper .post-cover .overlay {
-  position: absolute;
-  z-index: 10;
   width: 100%;
   height: 100%;
+  position: absolute;
+  z-index: 10;
   background-color: rgba(0,0,0,0.4);
   transition: all 0.8s;
   opacity: 0;
@@ -844,9 +861,10 @@ textarea {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: stretch;
+  flex: 1;
   padding: 12px 16px;
 }
-.post-list .post-card .post-info .post-title {
+.post-list .post-card .post-info .top-box .post-title {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -858,16 +876,16 @@ textarea {
   font-size: 1.8rem;
   font-weight: 700;
 }
-.post-list .post-card .post-info .post-title:hover {
+.post-list .post-card .post-info .top-box .post-title:hover {
   color: #fc6423;
 }
-.post-list .post-card .post-info .post-desc {
+.post-list .post-card .post-info .top-box .post-desc {
   overflow: hidden;
-  margin-top: 8px;
-  color: #ccc;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
+  margin-top: 8px;
+  color: #ccc;
   cursor: default;
 }
 .post-list .post-card .post-info .post-category-list {
@@ -936,9 +954,9 @@ textarea {
   margin: 0 5px;
 }
 .current {
-  display: inline-block;
   width: 20px;
   height: 20px;
+  display: inline-block;
   border-radius: 2px;
   background-color: #fc6423;
   line-height: 20px;
@@ -946,73 +964,80 @@ textarea {
   text-align: center;
 }
 .pagination .iconfont {
-  color: #fff;
+  color: #f5f5f5;
   font-weight: 700;
 }
-.page-home-container {
-  width: 100%;
-  height: auto;
-  box-sizing: border-box;
-}
-.post-toc-wrapper {
-  width: 25%;
+.aside-wrapper {
+  width: 30%;
   height: auto;
   min-width: 250px;
   margin-left: 20px;
 }
-.post-toc-wrapper .post-toc {
-  overflow-y: auto;
+.aside-wrapper .aside-content {
   position: sticky;
-  top: 70px;
+  top: 80px;
+}
+.aside-wrapper .aside-content .aside-card {
+  overflow-y: auto;
   width: 100%;
   height: auto;
   max-height: 85vh;
   padding: 20px;
+  margin-bottom: 20px;
   border-radius: 10px;
   background: #272727;
-  color: #fff;
 }
-.post-toc-wrapper .post-toc .post-toc-title {
-  margin-bottom: 10px;
+.aside-wrapper .aside-content .aside-card .aside-card-title {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 1.4rem;
   font-size: 1.6rem;
   font-weight: 700;
 }
-.post-toc-wrapper .post-toc .post-toc-title .iconfont {
+.aside-wrapper .aside-content .aside-card .aside-card-title .iconfont {
   margin-right: 6px;
+  font-size: 2rem;
 }
-.post-toc-wrapper .post-toc .toc-link {
+.aside-wrapper .aside-content .post-toc .toc-link {
   position: relative;
   display: block;
-  padding: 8px 10px;
+  padding-left: 10px;
   transition: all 0.6s;
+  line-height: 3.2rem;
 }
-.post-toc-wrapper .post-toc .toc-link:hover {
+.aside-wrapper .aside-content .post-toc .toc-link:hover {
   color: #fc6423;
 }
-.post-toc-wrapper .post-toc .toc-text {
+.aside-wrapper .aside-content .post-toc .toc-text {
   word-break: break-all;
 }
-.post-toc-wrapper .post-toc .toc-child {
+.aside-wrapper .aside-content .post-toc .toc-child {
   overflow: hidden;
   width: 0;
   height: 0;
 }
-.post-toc-wrapper .post-toc .toc-child:has(.toc-active) {
+.aside-wrapper .aside-content .post-toc .toc-child:has(.toc-active) {
   width: auto;
   height: auto;
 }
-.post-toc-wrapper .post-toc .toc-item:hover .toc-child {
+.aside-wrapper .aside-content .post-toc .toc-item {
+  padding-left: 3px;
+}
+.aside-wrapper .aside-content .post-toc .toc-item:hover .toc-child {
   width: auto;
   height: auto;
 }
-.post-toc-wrapper .post-toc .toc-child li {
+.aside-wrapper .aside-content .post-toc .toc-child li {
   padding-left: 16px;
 }
-.post-toc-wrapper .post-toc .toc-active {
+.aside-wrapper .aside-content .post-toc .toc-active {
   background-color: #111;
   color: #fc6423;
 }
-.post-toc-wrapper .post-toc .toc-active::before {
+.aside-wrapper .aside-content .post-toc .toc-active::before {
   content: '';
   position: absolute;
   top: 0;
@@ -1021,8 +1046,46 @@ textarea {
   height: 100%;
   background-color: #fc6423;
 }
+.aside-wrapper .aside-content .latest-posts .latest-post-list .latest-post {
+  margin-bottom: 10px;
+}
+.aside-wrapper .aside-content .latest-posts .latest-post-list .latest-post .post-link {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.aside-wrapper .aside-content .latest-posts .latest-post-list .latest-post .post-link .post-cover {
+  width: 4em;
+  height: 4em;
+  margin-right: 10px;
+  object-fit: cover;
+}
+.aside-wrapper .aside-content .latest-posts .latest-post-list .latest-post .post-link .post-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: stretch;
+}
+.aside-wrapper .aside-content .latest-posts .latest-post-list .latest-post .post-link .post-info .title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  word-break: keep-all;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.aside-wrapper .aside-content .latest-posts .latest-post-list .latest-post .post-link .post-info .time {
+  padding: 0.3em 0;
+  font-size: 1.2rem;
+  color: #bbb;
+}
 @media only screen and (max-width: 1000px) {
-  .post-toc-wrapper {
+  .aside-wrapper {
     display: none;
   }
 }
@@ -1082,6 +1145,14 @@ textarea {
   pointer-events: none;
 }
 .post-prev-next .link-text .link-title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  word-break: keep-all;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
   margin-top: 10px;
   font-size: 2rem;
   font-weight: 700;
@@ -1155,7 +1226,7 @@ textarea {
   width: auto;
   height: 80px;
   margin-right: 10px;
-  border-radius: border-radius-base;
+  border-radius: 6px;
   background-color: #444;
   cursor: pointer;
 }
@@ -1175,7 +1246,7 @@ textarea {
   z-index: 11;
   width: 100%;
   height: 100%;
-  border-radius: border-radius-base;
+  border-radius: 6px;
   box-shadow: 0 0 0 2px #999 inset;
 }
 .page-post-container {
@@ -1184,7 +1255,7 @@ textarea {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: stretch;
-  padding: 40px;
+  padding: 40px 6%;
 }
 .page-post-container .post-wrapper {
   display: flex;
@@ -1193,7 +1264,7 @@ textarea {
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  padding: 20px;
+  padding: 25px;
   border-radius: 10px;
   background: #272727;
   color: #f5f5f5;
@@ -1300,10 +1371,15 @@ textarea {
 .page-post-container .post-wrapper .tags .tag:hover .tag-link {
   color: #f5f5f5;
 }
+@media only screen and (max-width: 500px) {
+  .page-post-container .post-wrapper {
+    padding: 20px;
+  }
+}
 .page-project-container {
   width: 100%;
   height: auto;
-  padding: 40px;
+  padding: 40px 6%;
 }
 .page-project-container .project-list {
   width: auto;
@@ -1318,7 +1394,7 @@ textarea {
   margin-bottom: 20px;
 }
 .page-message-container {
-  padding: 40px;
+  padding: 40px 6%;
 }
 .page-message-container .message-wrapper {
   padding: 25px;
@@ -1326,7 +1402,7 @@ textarea {
   border-radius: 6px;
 }
 .page-about-container {
-  padding: 40px;
+  padding: 40px 6%;
 }
 .page-about-container .about-content {
   padding: 15px 25px;
@@ -1334,7 +1410,7 @@ textarea {
   background-color: #272727;
 }
 .page-link-container {
-  padding: 40px;
+  padding: 40px 6%;
 }
 .page-link-container .card {
   min-width: 250px;
@@ -1570,7 +1646,7 @@ textarea {
 }
 .search-pop-overlay .popup .search-header .search-title {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;

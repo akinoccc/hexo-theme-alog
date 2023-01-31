@@ -29,7 +29,7 @@
       <!-- <a name="index" style=" position: relative;top: -120px;display: block;height: 0;overflow: hidden;"></a> -->
       <%- page.content %>
     </article>
-    <%- list_tags(page.tags, { show_count: false, class: { ul: "tags", li: "tag", a: "tag-link" } }) %>
+    <!-- <%- list_tags(page.tags, { show_count: false, class: { ul: "tags", li: "tag", a: "tag-link" } }) %> -->
     <%- partial("_partial/post/prev_next.ejs") %>
     <% if(page.comment !== false) { %>
     <%- partial("_partial/comment.ejs", { show_divide: true, show_header: true }) %>
