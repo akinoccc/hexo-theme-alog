@@ -153,7 +153,3 @@ layout: projects
 ## 贡献
 
 欢迎提`issue`或者`PR`到这个主题
-
-## 贡献者
-
-<img src="https://raw.githubusercontent.com/hexo-theme-alog/contributors/master/contributors.svg" alt="Contributors" style="max-width: 100%;">
