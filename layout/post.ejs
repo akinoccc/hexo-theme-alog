@@ -4,7 +4,9 @@
       <% if(page.cover) { %>
       <img class="post-cover" src="<%= page.cover %>" alt="<%= page.title %>">
       <% } %>
+      <% if(page.title) { %>
       <span class="post-title"><%= page.title %></span>
+      <% } %>
       <div class="post-publish-info-wrapper flex">
         <img class="author-avatar" src="/images/avatar.jpg" alt="">
         <div class="post-info flex flex-column flex-space-around">

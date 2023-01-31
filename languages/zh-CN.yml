@@ -2,6 +2,7 @@ header:
   category: 分类
 
 post:
+  no_title: 没有标题啦~
   pv: 阅读
   toc: 目录
   lastest: 最新推荐

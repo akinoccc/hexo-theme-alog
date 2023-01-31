@@ -22,20 +22,14 @@
       <% page.posts.forEach((item) => { %>
       <li class="post-card <%= is_home() && item.top ? "top" : "" %>">
         <div class="post-cover-wrapper">
-          <% if(item.cover) { %>
-          <a class="post-cover" style="background-image: url(<%=item.cover%>);" href="<%= url_for(item.path) %>">
+          <a class="post-cover" style="background-image: url(<%=item.cover || "/images/no-cover.png"%>);" href="<%= url_for(item.path) %>">
             <div class="overlay"></div>
           </a>
-          <% } else { %>
-          <a class="post-cover no-post-cover" style="background-image: url(/images/no-cover.png);" href="<%= url_for(item.path) %>">
-            <div class="overlay"></div>
-          </a>
-          <% } %>
         </div>
         <div class="post-info">
           <div class="top-box">
             <a class="post-title" href="<%= url_for(item.path) %>">
-              <%=item.title %>
+              <%= item.title || __("post.no_title") %>
             </a>
             <p class="post-desc">
               <%= strip_html(truncate(item.content, {length: 200})) %>

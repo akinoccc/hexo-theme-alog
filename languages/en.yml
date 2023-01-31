@@ -2,6 +2,7 @@ header:
   category: Category
 
 post:
+  no_title: No Title
   pv: PV
   toc: Toc
   lastest: Lastest
