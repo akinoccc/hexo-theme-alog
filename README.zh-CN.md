@@ -94,7 +94,7 @@ local_search:
   trigger: auto
 ```
 
-### 关于菜单及导航
+### 菜单及导航
 
 主题额外支持以下几种布局 `project`、`message`、`links`、`about`。
 
@@ -108,15 +108,15 @@ layout: links
 ---
 ```
 
-### 关于项目列表
+### 项目列表
 
-创建 `project/index.md` 并填写对应的头部之后. 你可以在该文件中填写你的项目列表，项目内容没有格式要求，只需要使用 `///` 分割每一个项目即可。
+创建 `/<projects_path>/index.md` 并填写对应的头部之后. 你可以在该文件中填写你的项目列表，项目内容没有格式要求，只需要使用 `///` 分割每一个项目即可。
 
 #### Example
 
 ```md
 ---
-layout: project
+layout: projects
 ---
 
 ## 项目 1
@@ -139,6 +139,10 @@ layout: project
 
 链接: https://github.com/xxxx
 ```
+
+### 关于
+
+你可以随意地撰写内容在`/<about_path>/index.md`，没有任何限制。
 
 ## 贡献
 

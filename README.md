@@ -1,6 +1,6 @@
 # Alog
 
-> Alog is a simple and elegant hexo theme. Remove `tag`, `archive`.
+> Alog is a simple and elegant hexo theme.
 
 ## Document
 
@@ -95,7 +95,7 @@ local_search:
   trigger: auto
 ```
 
-### About menu
+### About `menu`
 
 We additionally support the layouts of `project`, `message`, `links` and `about`.
 
@@ -109,15 +109,15 @@ layout: links
 ---
 ```
 
-### About project page
+### Project List
 
-After creating `project/index.md` and fill in the appropriate front-matter. You can write your project list in this file and no format requirements. Just split the list using `///`.
+After creating `/<projects_path>/index.md` and fill in the appropriate front-matter. You can write your project list in this file and no format requirements. Just split the list using `///`.
 
 #### Example:
 
 ```md
 ---
-layout: project
+layout: projects
 ---
 
 ## project1
@@ -141,6 +141,10 @@ Desc：this is desciption.
 Link: https://github.com/xxxx
 ```
 
+### About
+
+You can write content in `/<about_path>/index.md` without any restrictions.
+
 ## Contributing
 
-We're welcome issue or PR to this hexo theme.
+Welcome issue or PR to this theme project.
