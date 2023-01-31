@@ -1,0 +1,20 @@
+{
+  "name": "hexo-theme-alog",
+  "version": "1.0.0",
+  "description": "Alog is a simple and elegant hexo theme.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vkm0303/hexo-theme-alog.git"
+  },
+  "keywords": [
+    "hexo",
+    "theme",
+    "alog"
+  ],
+  "author": "Akino",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vkm0303/hexo-theme-alog/issues"
+  },
+  "homepage": "https://github.com/vkm0303/hexo-theme-alog#readme"
+}
