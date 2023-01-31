@@ -1,6 +1,6 @@
 # Alog
 
-> Alog is a simple and elegant hexo theme.
+> Alog is a simple and elegant hexo theme. Remove `tag`, `archive`.
 
 ## Document
 
