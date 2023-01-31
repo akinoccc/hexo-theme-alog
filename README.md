@@ -151,6 +151,16 @@ Link: https://github.com/xxxx
 
 You can write content in `/<about_path>/index.md` without any restrictions.
 
+### Highlight
+
+The theme has built-in highlighting, please turn off the HEXO highlighting setting.
+
+```yml
+# _config.yml
+highlight:
+  enable: false
+```
+
 ## Contributing
 
 Welcome issue or PR to this theme project.

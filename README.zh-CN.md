@@ -48,12 +48,12 @@ theme: alog
 menu:
   - name: Home
     path: /
-  - name: Project
-    path: /project
+  - name: Projects
+    path: /projects
   - name: Message
     path: /message
-  - name: Link
-    path: /friend-link
+  - name: Links
+    path: /links
   - name: About
     path: /about
 
@@ -70,32 +70,32 @@ links:
       desc: Akino's blog.
 
 footer:
-  enable: boolean
-  building_time: time string # 建站时间
+  enable: true
+  building_time: 2023 # 建站时间
 
 # 开启页面加载动画
 loading:
-  enable: bolean
+  enable: true
 
 # 开启文章阅读次数统计
 busuanzi:
-  enable: boolean
+  enable: true
 
 # 配置详见valine官方文档: https://valine.js.org/
 valine:
-  enable: boolean
-  appId: string
-  appKey: string
-  avatar: string
-  placeholder: string # 评论输入框占位文字
-  pageSize: number # 评论列表每一页的评论数量
-  visitor: boolean # 文章阅读次数统计
-  recordIP: boolean
+  enable: true
+  appId: your app id
+  appKey: your app key
+  avatar: avatar style
+  placeholder: xxx # 评论输入框占位文字
+  pageSize: 10 # 评论列表每一页的评论数量
+  visitor: false # 文章阅读次数统计
+  recordIP: true
 
 # 本地搜索依赖hexo-generator-searchdb，在使用前请先安装该依赖
 local_search:
-  enable: boolean
-  top_n_per_article: number # 每篇文章显示的搜索匹配数量
+  enable: true
+  top_n_per_article: 1 # 每篇文章显示的搜索匹配数量
   preload: true # 预加载数据
   trigger: auto
 ```
@@ -149,6 +149,16 @@ layout: projects
 ### 关于
 
 你可以随意地撰写内容在`/<about_path>/index.md`，没有任何限制。
+
+### 代码高亮
+
+主题已内置高亮，请关闭 hexo 的代码高亮设置。
+
+```yml
+# _config.yml
+highlight:
+  enable: false
+```
 
 ## 贡献
 
