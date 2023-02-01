@@ -100,6 +100,8 @@ local_search:
   trigger: auto
 ```
 
+## 使用
+
 ### 菜单及导航
 
 主题额外支持以下几种布局 `project`、`message`、`links`、`about`。
@@ -125,6 +127,8 @@ layout: links
 layout: projects
 ---
 
+/// (👈The split symbol)
+
 ## 项目 1
 
 项目描述：xxx
@@ -149,6 +153,14 @@ layout: projects
 ### 关于
 
 你可以随意地撰写内容在`/<about_path>/index.md`，没有任何限制。
+
+### 文章置顶
+
+在文章头部配置中添加 `sticky: level` 即可。
+
+```yml
+sticky: 10
+```
 
 ### 代码高亮
 
