@@ -29,7 +29,7 @@ npm i hexo-theme-alog
 
 ```bash
 cd blog_root_dir/
-$ git clone https://github.com/vkm0303/hexo-theme-alog themes/alog
+git clone https://github.com/vkm0303/hexo-theme-alog themes/alog
 ```
 
 完成之后，打开`hexo配置文件`，将`theme`设置为`alog`

@@ -29,7 +29,7 @@ Or you can clone this repository:
 
 ```bash
 cd blog_root_dir/
-$ git clone https://github.com/vkm0303/hexo-theme-alog themes/alog
+git clone https://github.com/vkm0303/hexo-theme-alog themes/alog
 ```
 
 After done this, set `theme` variable to `alog`
