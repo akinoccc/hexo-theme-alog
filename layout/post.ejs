@@ -8,11 +8,11 @@
       <span class="post-title"><%= page.title %></span>
       <% } %>
       <div class="post-publish-info-wrapper flex">
-        <img class="author-avatar" src="/images/avatar.jpg" alt="">
+        <img class="author-avatar" src="<%= theme.logo %>" alt="">
         <div class="post-info flex flex-column flex-space-around">
           <div>
             <%- config.author %>
-            <span>· <%- date(page.date, "M/D, YYYY") %> · </span>
+            <span>· <%- date(page.date, "MM/DD, YYYY") %> · </span>
             <span id="<%= url_for(page.path) %>" class="leancloud_visitors" data-flag-title="<%= page.title %>">
               <%= __("post.pv") %>
               <% if(theme.busuanzi && theme.busuanzi.enable) { %>

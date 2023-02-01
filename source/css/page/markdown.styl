@@ -1,11 +1,11 @@
 .markdown 
-  line-height: 36px
+  line-height: 1.85
   a
     color: $orange
 
   p
     margin: 8px 0
-    line-height: 24px
+    line-height: inherit
 
   h1, h2, h3, h4, h5, h6
     display: flex
@@ -16,11 +16,14 @@
     position: relative
     padding-left: 14px
   h1
-    line-height: 50px
+    margin: 16px 0
+    line-height: 1.8
   h2, h3
-    line-height: 46px
+    margin: 12px 0
+    line-height: 1.6
   h4, h5, h6
-    line-height: 40px
+    margin: 8px 0
+    line-height: 1.4
   h2::before
   h3::before 
     content: ''
@@ -29,9 +32,11 @@
     width: 6px
     border-radius: 2px
   h2::before
+    top: 7px
     height: 18px
     background-color: $orange
   h3::before 
+    top: 6px
     height: 14px
     background-color: #ff6f31
   // h1:target
@@ -45,6 +50,8 @@
 
   ol, ul 
     padding: 0 15px
+    li
+      // margin: 4px 0
   ul 
     li 
       list-style: disc
@@ -63,7 +70,7 @@
 
   blockquote
     margin: 10px 0
-    padding: 4px 10px
+    padding: 10px
     border-left: 6px solid #6482f8
     background-color: #434343
     // p

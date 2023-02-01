@@ -70,10 +70,8 @@
   margin-right: 10px;
   object-fit: cover;
 }
-.aside-wrapper .aside-content .latest-posts .latest-post-list .latest-post .post-link .post-info .title {
-  margin-bottom: 0.3em;
-}
 .aside-wrapper .aside-content .latest-posts .latest-post-list .latest-post .post-link .post-info .time {
+  padding: 0.3em 0;
   font-size: 1.2rem;
   color: $grey;
 }

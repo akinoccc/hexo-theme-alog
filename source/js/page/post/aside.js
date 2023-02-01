@@ -8,7 +8,7 @@ export class Toc {
   // Override the default jump event.
   jumpToHeader(e) {
     e.preventDefault();
-    const $target = $($(this).attr('href'));
+    const $target = $(decodeURI($(this).attr('href')));
     if ($target.length > 0) {
       const scrollTop = $target.offset().top - $('.main-header').outerHeight() - 20;
       $('html, body').animate({ scrollTop }, 500);
@@ -29,7 +29,7 @@ export class Toc {
       }
       if ($currentHeading.length) {
         const anchorName = $currentHeading.attr('id');
-        const $tocItem = $(`.toc-link[href="#${anchorName}"]`);
+        const $tocItem = $(`.toc-link[href="#${encodeURI(anchorName)}"]`);
         if (!$tocItem.hasClass('toc-active')) {
           $('.toc-active').removeClass('toc-active');
           $tocItem.addClass('toc-active');

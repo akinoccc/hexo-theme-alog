@@ -1,8 +1,9 @@
 header:
-  category: Category
+  categories: Categories
 
 post:
   no_title: No Title
+  default_category: Uncategorized
   pv: PV
   toc: Toc
   lastest: Lastest

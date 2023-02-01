@@ -31,6 +31,7 @@
     overflow: hidden
     position: relative
     border-radius: $border-radius-base
+    box-shadow: 0 0 1px 1px #222222
     background-color: $black-deep
     .post-cover-wrapper 
       size(100%, auto)
@@ -44,6 +45,7 @@
         border-radius: $border-radius-base $border-radius-base 0 0
         background-repeat: no-repeat
         background-size: cover
+        background-position: center center
         cursor: pointer
         transition: all 0.8s
         .overlay 
@@ -77,7 +79,7 @@
       .post-category-list 
         flex-box()
         size(100%, auto)
-        margin: 10px 0
+        margin-bottom: 10px
         .post-category-list-item 
           flex-box(center, center)
           margin-right: 6px
@@ -94,8 +96,19 @@
             background-color: $purple
             .post-category-list-link 
               color: $whitesmoke
+      .uncategoried
+        display: inline-block
+        margin-bottom: 10px
+        padding: 4px 8px
+        border-radius: 4px
+        background-color: rgba(46, 75, 111, 0.5)
+        border-radius: 2px
+        color: $purple
+        font-size: 1.2rem
+        
       .post-publish-time 
         flex-box(row, space-between)
+        margin-top: 10px
         font-size: 1.2rem
         color: $grey-light
         .iconfont 

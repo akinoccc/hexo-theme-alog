@@ -1,16 +1,14 @@
 hexo.extend.helper.register('list_recommendation', function () {
-  // const { get_top_posts, get_latest_posts } = this;
+  const { get_top_posts, get_latest_posts } = this;
   const data = hexo.locals.get('data').recommendedList;
   let recommendedList = [];
   if (data) {
     recommendedList = data.recommendation;
   } else {
-    // recommendedList = get_top_posts(5);
-    // if (recommendedList.length === 0) {
-    //   recommendedList = get_latest_posts(5);
-    // }
-
-    recommendedList = hexo.locals.get('posts').slice(0, 5);
+    recommendedList = get_top_posts();
+    if (recommendedList.length === 0) {
+      recommendedList = get_latest_posts(5);
+    }
   }
 
   const templates = [];

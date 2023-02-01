@@ -1,12 +1,12 @@
 .markdown {
-  line-height: 36px;
+  line-height: 1.85;
 }
 .markdown a {
   color: $orange;
 }
 .markdown p {
   margin: 8px 0;
-  line-height: 24px;
+  line-height: inherit;
 }
 .markdown h1,
 .markdown h2,
@@ -25,16 +25,19 @@
   padding-left: 14px;
 }
 .markdown h1 {
-  line-height: 50px;
+  margin: 16px 0;
+  line-height: 1.8;
 }
 .markdown h2,
 .markdown h3 {
-  line-height: 46px;
+  margin: 12px 0;
+  line-height: 1.6;
 }
 .markdown h4,
 .markdown h5,
 .markdown h6 {
-  line-height: 40px;
+  margin: 8px 0;
+  line-height: 1.4;
 }
 .markdown h2::before,
 .markdown h3::before {
@@ -45,10 +48,12 @@
   border-radius: 2px;
 }
 .markdown h2::before {
+  top: 7px;
   height: 18px;
   background-color: $orange;
 }
 .markdown h3::before {
+  top: 6px;
   height: 14px;
   background-color: #ff6f31;
 }
@@ -71,7 +76,7 @@
 }
 .markdown blockquote {
   margin: 10px 0;
-  padding: 4px 10px;
+  padding: 10px;
   border-left: 6px solid #6482f8;
   background-color: #434343;
 }

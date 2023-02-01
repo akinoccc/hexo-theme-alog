@@ -17,10 +17,11 @@
   <% } else { %>
   <%- partial("_partial/page-header.ejs") %>
   <% } %>
+  <% list_posts() %>
   <div class="post-list-wrapper animate__animated animate__fadeInUp">
     <ul class="post-list">
       <% page.posts.forEach((item) => { %>
-      <li class="post-card <%= is_home() && item.top ? "top" : "" %>">
+      <li class="post-card <%= is_home() && item.sticky ? "top" : "" %>">
         <div class="post-cover-wrapper">
           <a class="post-cover" style="background-image: url(<%=item.cover || "/images/no-cover.png"%>);" href="<%= url_for(item.path) %>">
             <div class="overlay"></div>
@@ -28,18 +29,22 @@
         </div>
         <div class="post-info">
           <div class="top-box">
+            <% if(item.categories.length) { %>
+            <%- list_categories(item.categories, { show_count: false, class: "post-category", depth: -1 }) %>
+            <% } else { %>
+            <div class="uncategoried"><%- __("post.default_category") %></div>
+            <% } %>
             <a class="post-title" href="<%= url_for(item.path) %>">
               <%= item.title || __("post.no_title") %>
             </a>
-            <p class="post-desc">
+            <!-- <p class="post-desc">
               <%= strip_html(truncate(item.content, {length: 200})) %>
-            </p>
+            </p> -->
           </div>
           <div class="bottom-box">
-            <%- list_categories(item.categories, { show_count: false, class: 'post-category', depth: -1 }) %>
             <div class="post-publish-time">
-              <span><%= date(item.date, 'M/D, YYYY') %> </span>
-              <span class="iconfont icon-eye"> 1230</span>
+              <span><%= date(item.date, "MM/DD, YYYY") %> </span>
+              <!-- <span class="iconfont icon-eye"> 1230</span> -->
             </div>
           </div>
       </li>

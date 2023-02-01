@@ -1,6 +1,6 @@
 <header class="main-header animate__animated animate__fadeInDown">
   <a class="blogger-info flex flex-align-center" href="/">
-    <img src="<%= theme.avatar %>" alt="avatar">
+    <img src="<%= theme.logo %>" alt="avatar">
     <span><%- config.title %> </span>
   </a>
   <nav>
@@ -8,7 +8,7 @@
       <%- list_menu(theme.menu) %>
       <li class="menu-category">
         <div class="flex flex-align-center">
-          <span><%= __("header.category") %></span>
+          <span><%= __("header.categories") %></span>
           <span class="iconfont icon-chevron-bottom"></span>
         </div>
         <%- list_categories(site.categories, { class: "category-menu", show_count: false }) %>

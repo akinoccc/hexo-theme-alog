@@ -1,18 +1,19 @@
 "use strict";
 
 hexo.extend.helper.register('list_recommendation', function () {
-  // const { get_top_posts, get_latest_posts } = this;
+  var get_top_posts = this.get_top_posts,
+      get_latest_posts = this.get_latest_posts;
   var data = hexo.locals.get('data').recommendedList;
   var recommendedList = [];
 
   if (data) {
     recommendedList = data.recommendation;
   } else {
-    // recommendedList = get_top_posts(5);
-    // if (recommendedList.length === 0) {
-    //   recommendedList = get_latest_posts(5);
-    // }
-    recommendedList = hexo.locals.get('posts').slice(0, 5);
+    recommendedList = get_top_posts();
+
+    if (recommendedList.length === 0) {
+      recommendedList = get_latest_posts(5);
+    }
   }
 
   var templates = [];

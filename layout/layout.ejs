@@ -4,15 +4,15 @@
 <%- partial("_partial/head") %>
 
 <body style="position: relative;">
-  <%- partial('_partial/loading', { cache: true }) %>
-  <%- partial('_partial/bg-animation', { cache: true }) %>
-  <%- partial("_partial/side-menu", { cache: true }) %>
-  <%- partial("_partial/search/index", { cache: true }) %>
-  <%- partial("_partial/header", { cache: true }) %>
+  <%- partial('_partial/loading') %>
+  <%- partial('_partial/bg-animation') %>
+  <%- partial("_partial/side-menu") %>
+  <%- partial("_partial/search/index") %>
+  <%- partial("_partial/header") %>
   <main class="page-container">
     <%- body %>
   </main>
-  <%- partial("_partial/footer", { cache: true }) %>
+  <%- partial("_partial/footer") %>
 </body>
 
 <%- export_config() %>
