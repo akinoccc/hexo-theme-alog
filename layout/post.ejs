@@ -16,7 +16,7 @@
             <span id="<%= url_for(page.path) %>" class="leancloud_visitors" data-flag-title="<%= page.title %>">
               <%= __("post.pv") %>
               <% if(theme.busuanzi && theme.busuanzi.enable) { %>
-              <span id="busuanzi_value_site_pv"></span>
+              <span id="busuanzi_value_page_pv"></span>
               <% } else if(theme.valine && theme.valine.enable) { %>
               <span class="leancloud-visitors-count"></span>
               <% } %>
