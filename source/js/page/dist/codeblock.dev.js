@@ -64,11 +64,19 @@ function () {
       var height = $codeBlock.data('height');
 
       if (isCollapse) {
-        $(this).css('transform', 'rotateZ(0)');
-        $codeBlock.css('height', height);
+        $(this).css({
+          transform: 'rotateZ(0)'
+        });
+        $codeBlock.css({
+          height: height,
+          padding: '0.8em'
+        });
       } else {
         $(this).css('transform', 'rotateZ(90deg)');
-        $codeBlock.css('height', 0);
+        $codeBlock.css({
+          height: 0,
+          padding: '0 0.8em'
+        });
       }
 
       $(this).data('is-collapse', !isCollapse);

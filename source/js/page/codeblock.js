@@ -58,11 +58,11 @@ export default class CodeBlock {
     const $codeBlock = $(this).parent().next('pre');
     const height = $codeBlock.data('height');
     if (isCollapse) {
-      $(this).css('transform', 'rotateZ(0)');
-      $codeBlock.css('height', height);
+      $(this).css({ transform: 'rotateZ(0)' });
+      $codeBlock.css({ height, padding: '0.8em' });
     } else {
       $(this).css('transform', 'rotateZ(90deg)');
-      $codeBlock.css('height', 0);
+      $codeBlock.css({ height: 0, padding: '0 0.8em' });
     }
     $(this).data('is-collapse', !isCollapse);
   }
