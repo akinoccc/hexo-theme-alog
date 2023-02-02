@@ -163,6 +163,10 @@ Set `sticky: number` in front-matter.
 sticky: 10
 ```
 
+### Recommendation
+
+By default, pinned posts are recommended. If you don't have pinned posts, recommend the last 5 posts.
+
 ### Highlight
 
 The theme has built-in highlighting, please turn off the HEXO highlighting setting.
