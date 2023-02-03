@@ -1,5 +1,6 @@
 .code-block-container
   overflow: hidden
+  size(100%, auto)
   margin: 10px 0
   box-sizing: content-box
   border-radius: $border-radius-base
@@ -20,16 +21,17 @@
       margin-right: 5px
     span:nth-child(1)
       background: red
-      animation: flash 5s infinite
+      animation: flash 2s 0s infinite
     span:nth-child(2) 
       background: sandybrown
-      animation: flash 5s 0.2s infinite
+      animation: flash 2s 0.2s infinite
     span:nth-child(3)
       background: limegreen
-      animation: flash 5s 0.4s infinite
+      animation: flash 2s 0.4s infinite
 
     @keyframes flash
-      100% 
+      50% 
+        opacity: 0.2
         transform: scale(1.1)
 
     .language
@@ -63,15 +65,17 @@
 
   pre
     overflow-y: hidden
-    margin: 0
+    overflow-x: auto 
+    margin: 0 
     padding: 0.8em
-    box-sizing: content-box
+    white-space: pre-wrap
     transition: all 0.5s
 
   .hljs 
-    display: block
     overflow-x: auto
-    // background: #303030
+    display: block
+    width: 100%
+    white-space: pre-wrap
     color: #abb2bf
 
   .hljs-comment

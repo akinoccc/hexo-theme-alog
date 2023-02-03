@@ -9,23 +9,22 @@ export default class CodeBlock {
   _initHighlightStyle() {
     hljs.highlightAll();
     $('pre').each(function () {
-      const language = $(this).children(':first')[0].result.language.toUpperCase();
+      const language = $(this).children(':first')[0].result.language || 'TEXT';
       const $preMac = $(
         `<div class="highlight-tool">
         <span></span>
         <span></span>
         <span></span>
-        <span class="language">${language}</span>
+        <span class="language">${language.toUpperCase()}</span>
         <i class="iconfont icon-copy"></i>
         <i class="iconfont icon-chevron-bottom" data-is-collapse=false></i>
       </div>`
       );
-      const height = $(this).first().outerHeight();
       $(this)
         .wrap('<div class="code-block-container"></div>')
         .before($preMac)
-        .css({ height, whiteSpace: 'pre-wrap' })
-        .data('height', height);
+        .css({ height: $(this).outerHeight() })
+        .data('height', $(this).outerHeight());
     });
   }
 
