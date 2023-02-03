@@ -6,6 +6,7 @@
   p
     margin: 8px 0
     line-height: inherit
+    color: inherit
 
   h1, h2, h3, h4, h5, h6
     display: flex
@@ -22,7 +23,7 @@
     margin: 12px 0
     line-height: 1.6
   h4, h5, h6
-    margin: 8px 0
+    margin: 10px 0
     line-height: 1.4
   h2::before
   h3::before 
@@ -49,7 +50,7 @@
   //   margin-top: -62px
 
   ol, ul 
-    padding: 0 15px
+    padding: 8px 15px
     li
       // margin: 4px 0
   ul 
@@ -70,10 +71,31 @@
 
   blockquote
     margin: 10px 0
-    padding: 10px
+    padding: 4px 10px
     border-left: 6px solid #6482f8
     background-color: #434343
     // p
     //   color: $whitesmoke
+
+  // 自定义提示容器样式（提示、成功、警告、危险），可自行修改相关样式
+  .info, .tips, .success, .warning, .danger
+    padding-left: 10px
+    color: $black-lighter
+  .info
+    background-color: rgb(176, 176, 176)
+    border-left: 4px solid rgb(75, 75, 75)
+  .tips
+    background-color: rgb(186, 226, 252)
+    border-left: 4px solid rgb(52, 152, 219)
+  .success
+    background-color: rgb(202, 255, 231)
+    border-left: 4px solid rgb(66, 185, 131)
+  .warning
+    background-color: rgb(255, 247, 208)
+    border-left: 4px solid rgb(231, 192, 0)
+  .danger
+    background-color: rgb(255, 230, 230)
+    border-left: 4px solid rgb(204, 0, 0)
+
 
 
