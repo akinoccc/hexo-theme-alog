@@ -1,0 +1,103 @@
+.markdown 
+  line-height: 1.85
+  a
+    color: $orange
+
+  p
+    margin: 8px 0
+    line-height: inherit
+    color: inherit
+
+  h1, h2, h3, h4, h5, h6
+    display: flex
+    align-items: center
+    margin: 0
+    color: $whitesmoke
+  h2, h3
+    position: relative
+    padding-left: 14px
+  h1
+    margin: 16px 0
+    line-height: 1.8
+  h2, h3
+    margin: 12px 0
+    line-height: 1.6
+  h4, h5, h6
+    margin: 10px 0
+    line-height: 1.4
+  h2::before
+  h3::before 
+    content: ''
+    position: absolute
+    left: 0
+    width: 6px
+    border-radius: 2px
+  h2::before
+    top: 7px
+    height: 18px
+    background-color: $orange
+  h3::before 
+    top: 6px
+    height: 14px
+    background-color: #ff6f31
+  // h1:target
+  // h2:target 
+  // h3:target 
+  // h4:target 
+  // h5:target 
+  // h6:target
+  //   padding-top: 62px
+  //   margin-top: -62px
+
+  ol, ul 
+    padding: 8px 15px
+    li
+      // margin: 4px 0
+  ul 
+    li 
+      list-style: disc
+  ol 
+    li
+      list-style: decimal
+
+  img
+    max-width: 100%
+    max-height: 100%
+    margin: 10px 0
+    // margin-left: 50%
+    // transform: translateX(-50%)
+    object-fit: contain
+    cursor: pointer
+
+  blockquote
+    margin: 10px 0
+    padding: 4px 10px
+    border-left: 6px solid #6482f8
+    background-color: #434343
+    // p
+    //   color: $whitesmoke
+
+  // 自定义提示容器样式（提示、成功、警告、危险），可自行修改相关样式
+  .info, .tips, .success, .warning, .danger
+    margin: 10px 0
+    padding: 4px 10px
+    border-radius: 4px
+    color: $black-lighter
+  .info
+    background-color: rgb(194, 194, 194)
+    border-left: 6px solid rgb(101, 101, 101)
+  .tips
+    background-color: rgb(186, 226, 252)
+    border-left: 6px solid rgb(52, 152, 219)
+  .success
+    background-color: rgb(202, 255, 231)
+    border-left: 6px solid rgb(66, 185, 131)
+  .warning
+    background-color: rgb(255, 247, 208)
+    border-left: 6px solid rgb(231, 192, 0)
+  .danger
+    background-color: rgb(255, 230, 230)
+    border-left: 6px solid rgb(204, 0, 0)
+
+
+

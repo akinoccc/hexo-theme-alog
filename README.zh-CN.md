@@ -29,7 +29,7 @@ npm i hexo-theme-alog
 
 ```bash
 cd blog_root_dir/
-$ git clone https://github.com/vkm0303/hexo-theme-alog themes/alog
+git clone https://github.com/vkm0303/hexo-theme-alog themes/alog
 ```
 
 完成之后，打开`hexo配置文件`，将`theme`设置为`alog`
@@ -100,6 +100,8 @@ local_search:
   trigger: auto
 ```
 
+## 使用
+
 ### 菜单及导航
 
 主题额外支持以下几种布局 `project`、`message`、`links`、`about`。
@@ -125,6 +127,8 @@ layout: links
 layout: projects
 ---
 
+/// (👈The split symbol)
+
 ## 项目 1
 
 项目描述：xxx
@@ -149,6 +153,18 @@ layout: projects
 ### 关于
 
 你可以随意地撰写内容在`/<about_path>/index.md`，没有任何限制。
+
+### 文章置顶
+
+在文章头部配置中添加 `sticky: level` 即可。
+
+```yml
+sticky: 10
+```
+
+### 首页轮播推荐
+
+默认推荐置顶文章，若无置顶则推荐最新发表的 5 篇文章。
 
 ### 代码高亮
 

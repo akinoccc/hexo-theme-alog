@@ -1,3 +1,5 @@
+import Scroll from "../utils/scroll.js";
+
 let isSideMenuCollapse = false;
 $(function () {
   $(".main-header .icon-view-list").on("click", onSideMenuCollapse);
@@ -20,11 +22,13 @@ function onSideMenuCollapse() {
     $(".side-menu-container .menu")
       .removeClass("animate__slideInLeft")
       .addClass("animate__slideOutLeft");
+    Scroll.allowScroll();
     setTimeout(function () {
       $(".side-menu-container")
         .css("visibility", "hidden");
     }, 500);
   } else {
+    Scroll.unscroll();
     $(".side-menu-container")
       .css("visibility", "visible")
       .removeClass("animate__fadeOut")

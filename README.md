@@ -29,7 +29,7 @@ Or you can clone this repository:
 
 ```bash
 cd blog_root_dir/
-$ git clone https://github.com/vkm0303/hexo-theme-alog themes/alog
+git clone https://github.com/vkm0303/hexo-theme-alog themes/alog
 ```
 
 After done this, set `theme` variable to `alog`
@@ -101,7 +101,9 @@ local_search:
   trigger: auto
 ```
 
-### About `menu`
+## Usage
+
+### Menu
 
 We additionally support the layouts of `project`, `message`, `links` and `about`.
 
@@ -115,7 +117,7 @@ layout: links
 ---
 ```
 
-### Project List
+### Projects
 
 After creating `/<projects_path>/index.md` and fill in the appropriate front-matter. You can write your project list in this file and no format requirements. Just split the list using `///`.
 
@@ -125,6 +127,8 @@ After creating `/<projects_path>/index.md` and fill in the appropriate front-mat
 ---
 layout: projects
 ---
+
+/// (👈The split symbol)
 
 ## project1
 
@@ -150,6 +154,18 @@ Link: https://github.com/xxxx
 ### About
 
 You can write content in `/<about_path>/index.md` without any restrictions.
+
+### Sticky
+
+Set `sticky: number` in front-matter.
+
+```yml
+sticky: 10
+```
+
+### Recommendation
+
+By default, pinned posts are recommended. If you don't have pinned posts, recommend the last 5 posts.
 
 ### Highlight
 

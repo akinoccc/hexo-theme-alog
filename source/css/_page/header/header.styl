@@ -1,0 +1,112 @@
+.header-slot {
+  min-height: 60px
+}
+.main-header 
+  flex-box(row, flex-start, center)
+  position: fixed
+  top: 0
+  z-index: 3
+  width: 100%
+  max-width: 100%
+  min-height: 60px
+  // aspect-ratio: 22
+  padding: 10px 6%
+  box-shadow: 0 2px 10px 4px $black-deep
+  background-color: $black
+
+  /* blogger info */
+  .blogger-info 
+    height: 100%
+    font-size: 1.8rem
+
+    img 
+      size: 3.2vw
+      min-width: 40px
+      min-height: 40px
+      border-radius: 50%
+      margin-right: 10px
+    
+  /* menu */
+  .menu 
+    margin-left: 10vw 
+    li 
+      position: relative
+      border-radius: 2px
+      cursor: pointer
+      &:not(.menu-category):hover 
+        background-color: #272727
+    a 
+      display: block
+      padding: 10px
+    .menu-category 
+      position: relative
+      padding: 10px
+      &:hover 
+        .iconfont 
+          transform: rotateZ(180deg)
+        .category-menu-list 
+          display: block
+      .iconfont 
+        transform: rotateZ(0)
+        transition: all 0.2s
+      .category-menu-list 
+        position: absolute
+        left: 50%
+        top: 40px
+        display: none
+        padding: 10px 0
+        border: 1px solid #272727
+        border-radius: 6px
+        background-color: rgba(0, 0, 0, 0.9)
+        transform: translateX(-50%)
+        &::before 
+          content: ''
+          position: absolute
+          top: -12px
+          left: 50%
+          width: 0
+          height: 0
+          border: 6px solid
+          border-color: transparent transparent #272727 transparent
+          transform: translateX(-50%)
+        a 
+          padding: 8px 20px
+          word-break: keep-all
+      .category-menu-list-item:hover 
+        background-color: rgba(39, 39, 39, 0.7)
+    .active:not(.category-menu-list-item):after 
+      content: ''
+      position: absolute
+      left: 50%
+      bottom: 0
+      size: 75% 3px
+      transform: translateX(-50%)
+      border-radius: 4px
+      background-color: $orange
+
+  /* right icon */
+  .right-icon 
+    position: absolute
+    right: 6%
+    .iconfont 
+      cursor: pointer
+      font-size: 2.4rem
+    .icon-view-list 
+      display: none
+
+.active 
+  position: relative
+  a 
+    color: $orange
+
+@media only screen and (max-width: 1000px) 
+  .main-header .menu 
+    display: none
+  
+  .main-header .right-icon .icon-view-list 
+    display: block
+    margin-left: 15px
+
+@media only screen and (max-width: 500px) 
+  .main-header .blogger-info
+    font-size: 1.6rem
