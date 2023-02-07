@@ -14,7 +14,7 @@
 
 ## Live Preview
 
-👉 [Akino's blog](https://akino.icu)
+👉 <a href="https://akino.icu" target="_blank">Akino's blog</a>
 
 ## Installation
 

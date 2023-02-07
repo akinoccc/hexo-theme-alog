@@ -14,7 +14,7 @@
 
 ## 在线预览
 
-👉 [Akino's blog](https://akino.icu)
+👉 <a href="https://akino.icu" target="_blank">Akino's blog</a>
 
 ## 安装
 
