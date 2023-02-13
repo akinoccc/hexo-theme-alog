@@ -7,6 +7,19 @@ export default class CodeBlock {
   }
 
   _initHighlightStyle() {
+    hljs.registerLanguage('vue', () => {
+      return {
+        // contains: TYPES,
+        // keywords: LITERALS,
+        // illegal: '\\S'
+      }
+    });
+    hljs.registerLanguage('react', () => ({}));
+    $(document).on('DOMContentLoaded', () => {
+      document.querySelectorAll('pre code').forEach((el) => {
+        hljs.highlightElement(el);
+      });
+    });
     hljs.highlightAll();
     $('pre').each(function () {
       const language = $(this).children(':first')[0].result.language || 'TEXT';
