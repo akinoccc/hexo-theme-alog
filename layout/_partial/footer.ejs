@@ -1,5 +1,6 @@
 <footer class="page-footer animate__animated animate__fadeIn">
   <% if(theme.footer && theme.footer.enable) { %>
+    <span class="copyright">Copyright © <%- theme.footer.building_time + "-" + date(Date.now(), 'YYYY') %> <%= config.author %></span>
     <div id="footer_descr">
         <text><%= theme.footer.descr %></text>
     </div>
