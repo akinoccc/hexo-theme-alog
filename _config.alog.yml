@@ -29,6 +29,14 @@ footer:
   building_time: 2023 # 建站时间
   descr: # 随便写点话吧！
 
+comment_page:
+  cover: # 一个图片链接
+  message:
+    - 第一行
+    - 第二行
+    - 就像这样写
+    - 最好3-5行
+
 # 开启页面加载动画
 loading:
   enable: true
