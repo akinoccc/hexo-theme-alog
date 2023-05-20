@@ -1,6 +1,33 @@
-<%- partial("_partial/page-header.ejs") %>
+<!--<%- partial("_partial/page-header.ejs") %>
 <div class="page-message-container">
   <div class="message-wrapper animate__animated animate__fadeInUp">
     <%- partial("_partial/comment.ejs", { show_divide: false, show_header: false }) %>
+  </div>
+</div>-->
+
+<div id="maincontent">
+  <div id="form-wrap">
+    <img id="beforeimg" src="https://pic.imgdb.cn/item/64044397f144a010074433da.png">
+    <div id="envelop">
+      <form>
+        <div class="formain">
+          <img class="headerimg" src="<%= theme.envelope_comment.cover %>">
+          <div class="comments-main">
+            <div class="comments">
+              <% for(const i theme.envelope_comment.message) { %>
+                <div>
+                  <%= i %>
+                </div>
+              <% } %>
+            </div>
+            <div class="bottomcontent">
+              <img src="https://ae01.alicdn.com/kf/U0968ee80fd5c4f05a02bdda9709b041eE.png" class="bottomimg">
+            </div>
+          </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <img src="https://pic.imgdb.cn/item/64044397f144a010074433c4.png" id="afterimg">
   </div>
 </div>
