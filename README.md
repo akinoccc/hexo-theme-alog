@@ -70,8 +70,22 @@ links:
       link: https://akino.icu
       desc: Akino's blog.
 
+page_header: 
+  type: letter # custom ejs filename
+  platforms: # which platform will be displayed. options: mobile and pc
+   - pc
+   - mobile
+  apply_pages: # which page will be applied
+    - message
+  title: Message # option
+  content:
+    - First line
+    - Second line
+    - ...
+
 footer:
   enable: true
+  desc: My blog desc
   building_time: 2020 # The site's building time
 
 # Open page loading animation.
@@ -82,16 +96,21 @@ loading:
 busuanzi:
   enable: true
 
-# See the valine doc: https://valine.js.org/
-valine:
-  enable: true
-  appId: your app id
-  appKey: your app key
-  avatar: avatar style
-  placeholder: xxx # Comment input's placeholder
-  pageSize: 10 # Per page comment num.
-  visitor: false # Article reading statistics
-  recordIP: true
+comment:
+  use: valine # valine | waline | twikoo
+  valine: # See the valine doc: https://valine.js.org/
+    appId: your app id
+    appKey: your app key
+    avatar: avatar style
+    placeholder:  xxx # Comment input's placeholder
+    pageSize: 10 # Per page comment num
+    visitor: true # Article reading statistics
+    recordIP: true
+  waline: # See the waline doc: https://waline.js.org/
+    serverURL: # Deploy url
+  twikoo: # See the twikoo doc: https://twikoo.js.org/
+    envId: # env id(tencent cloud) | server url(vercel)
+    region: ap-shanghai # default: ap-shanghai
 
 # Local search depends on hexo-generator-searchdb, please install it before using local search.
 local_search:
@@ -175,6 +194,34 @@ The theme has built-in highlighting, please turn off the HEXO highlighting setti
 # _config.yml
 highlight:
   enable: false
+```
+
+### Custom Page Header
+
+if the page layout has page header, you can rewrite the header. 
+
+#### Add Custom Page Header Template
+
+In `alog/layout/_partial/page_headers/`, you can add your header template and use it by theme config.
+
+
+**In addition to the default header, the theme also provides a built-in `letter` page header, which can be used directly through configuration.**
+#### Config
+
+```yml
+# _config.alog.yml
+page_header: 
+  use: letter # custom ejs filename
+  platforms: # which platform will be displayed. options: mobile and pc
+   - pc
+   - mobile
+  apply_pages: # which page will be applied
+    - message
+  title: Message # option
+  content:
+    - First line
+    - Second line
+    - ...
 ```
 
 ## Contributing
