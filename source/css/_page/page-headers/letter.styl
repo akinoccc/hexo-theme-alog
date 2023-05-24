@@ -1,0 +1,109 @@
+.letter__warpper {
+  flex-box(row, center)
+  padding: 30px 0
+  min-height: 300px
+  background-color: transparent
+  .letter {
+    flex-box(row, center)
+    position: relative
+    width: 60%
+    max-width: 500px
+    padding: 0 10%
+    &:hover {
+      top: 60px
+      .envelope__close {
+        animation: roll 1s ease forwards
+      }
+      .letter__envelope {
+        top: 80px
+      }
+      .letter__content {
+        bottom: -85px
+        animation: expand 1s 1s ease forwards
+      }
+      .welcome {
+        opacity: 1
+        transition: all .5s 2s ease
+      }
+    }
+    .letter__content {
+      size(95%, 220px)
+      overflow: hidden
+      position: absolute
+      bottom: 20px
+      padding: 20px 30px
+      background-color: $whitesmoke
+      border-radius: 16px;
+      box-shadow: 2px 5px 10px $black;
+      transition: all 1s ease
+      color: $black-dim
+      text-align: center
+      p {
+        position: relative
+        padding: 10px 4px 4px
+        border-bottom: 1px dashed $grey-light
+        word-break: break-all
+        white-space: pre-line
+        line-height: 1.5
+        color: $black-dim
+      }
+    }
+    .welcome {
+      position: absolute
+      top: 40px
+      z-index: 4
+      width: 110%
+      height: 100%
+      background-size: 195% auto
+      background-repeat: no-repeat
+      background-position: center 0
+      background-image: url(/images/welcome.png)
+      opacity: 0
+    }
+    .letter__envelope {
+      position: absolute
+      top: 0
+      z-index: -1
+      max-height: 400px
+      width: 100%
+      height: 100%
+      background-position: center 0
+      background-repeat: no-repeat
+      background-size: 100% auto
+      transition: all 1s ease
+    }
+    .envelope__bg {
+      background-image: url(/images/envelope-bg.png)
+    }
+    .envelope__main {
+      z-index: 2
+      background-image:  url(/images/envelope.png)
+    }
+    .envelope__close {
+      z-index: 2
+      height: 210px
+      background-image: url(/images/envelope-front.png)
+      transform-origin: 0 4px
+    }
+  }
+}
+
+@keyframes roll {
+  10% {
+    left: -6px
+    background-image: url(/images/envelope-front.png)
+  }
+  100% {
+    z-index: -1
+    left: -6px
+    background-image: url(/images/envelope-back.png)
+    transform: rotateX(-180deg)
+  }
+}
+
+@keyframes expand {
+  100% {
+    z-index: 2
+    height: 350px
+  }
+}

@@ -1,0 +1,19 @@
+<div class="letter__warpper">
+  <div class="letter">
+    <div class="letter__content">
+      <% if(theme.page_header.title) { %>
+      <h2><%= theme.page_header.title %></h2>
+      <% } %>
+      <% for(const item of theme.page_header.content) { %>
+      <p><%= item %></p>
+      <% } %>
+      <% for(let i = 0; i < 10; i++) { %>
+      <p> &nbsp; </p>
+      <% } %>
+    </div>
+    <div class="welcome"></div>
+    <div class="letter__envelope envelope__close"></div>
+    <div class="letter__envelope envelope__bg"></div>
+    <div class="letter__envelope envelope__main"></div>
+  </div>
+</div>

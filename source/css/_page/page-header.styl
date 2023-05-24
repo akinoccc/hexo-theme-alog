@@ -14,3 +14,37 @@
     font-size: 2.4rem
     font-weight: $blod
     // color: #fc6423
+
+.page__header--custom {
+  display: none
+}
+
+.mobile {
+  @media screen and (max-width: 599px) {
+    display: block
+  }
+}
+
+.pc {
+  @media screen and (min-width: 600px) {
+    display: block
+  }
+}
+
+if (hexo-config("page_header.type")) {
+  $platforms = join(',', hexo-config("page_header.platforms"))
+  if(match("(mobile)", $platforms)) {
+    @media screen and (max-width: 599px) {
+      .page-header {
+        display: none
+      }
+    }
+  }
+  if(match("(pc)", $platforms)) {
+    @media screen and (min-width: 600px) {
+      .page-header {
+        display: none
+      }
+    }
+  }
+}
