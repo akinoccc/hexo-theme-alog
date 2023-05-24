@@ -1,9 +1,9 @@
 <footer class="page-footer animate__animated animate__fadeIn">
   <% if(theme.footer && theme.footer.enable) { %>
-    <span class="copyright">Copyright © <%- theme.footer.building_time + "-" + date(Date.now(), 'YYYY') %> <%= config.author %></span>
-    <div id="footer_descr">
-        <text><%= theme.footer.descr %></text>
-    </div>
-    <span>Powered by <a href="https://hexo.io/">Hexo</a> & <a href="https://github.com/vkm0303/hexo-theme-alog">Hexo-theme-alog</a></span>
+  <p class="footer__desc">
+    <%= theme.footer.desc %>
+  </p>
+  <p class="copyright">Copyright © <%- theme.footer.building_time + "-" + date(Date.now(), 'YYYY') %> <%= config.author %> </span>
+  <p>Powered by <%- link_to("https://hexo.io/", "Hexo", { external: true }) %> & <%- link_to("https://github.com/FE-Alog/hexo-theme-alog", "Hexo-theme-alog", { external: true }) %> </p>
   <% } %>
 </footer>
