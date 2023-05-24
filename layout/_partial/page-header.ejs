@@ -1,6 +1,6 @@
 <% if(theme.page_header.apply_pages.includes(page.layout)) { %>
 <div class="page__header--custom animate__animated animate__fadeInDown <%= theme.page_header.platforms.join(" ") %>">
-  <%- partial(`./page-headers/${theme.page_header.type}.ejs`) %>
+  <%- partial(`./page-headers/${theme.page_header.use}.ejs`) %>
 </div>
 <% } %>
 <div class="page-header animate__animated animate__fadeInDown">
