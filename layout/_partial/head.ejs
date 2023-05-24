@@ -20,8 +20,14 @@
   <%- js({ src: "js/page/side-menu.js", type: "module", defer: true }) %>
   <%- js({ src: "js/page/search/index.js", defer: true }) %>
 
-  <% if(theme.valine.enable) { %>
+  <% if(theme.comments.use === "valine") { %>
   <%- js({ src: "js/lib/valine.min.js" }) %>
+  <% } %>
+  <% if(theme.comments.use === "waline") { %>
+  <%- css("css/lib/waline-client@v2.css") %>
+  <% } %>
+  <% if(theme.comments.use === "twikoo") { %>
+  <%- js({ src: "js/lib/twikoo-1.6.16.all.min.js" }) %>
   <% } %>
 
   <% if(theme.busuanzi.enable) { %>
