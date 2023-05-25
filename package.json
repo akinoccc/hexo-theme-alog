@@ -3,6 +3,13 @@
   "private": false,
   "version": "1.1.0",
   "description": "Alog is a simple and elegant hexo theme.",
+  "files": [
+    "languages/**/*",
+    "layout/**/*",
+    "scripts/**/*",
+    "source/**/*",
+    "package.json"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/FE-Alog/hexo-theme-alog.git"
