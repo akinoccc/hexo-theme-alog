@@ -1,10 +1,11 @@
 {
   "name": "hexo-theme-alog",
+  "private": false,
   "version": "0.0.5",
   "description": "Alog is a simple and elegant hexo theme.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vkm0303/hexo-theme-alog.git"
+    "url": "git+https://github.com/FE-Alog/hexo-theme-alog.git"
   },
   "keywords": [
     "hexo",
@@ -14,7 +15,29 @@
   "author": "Akino",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vkm0303/hexo-theme-alog/issues"
+    "url": "https://github.com/FE-Alog/hexo-theme-alog/issues"
   },
-  "homepage": "https://github.com/vkm0303/hexo-theme-alog#readme"
+  "homepage": "https://github.com/FE-Alog/hexo-theme-alog#readme",
+  "scripts": {
+    "commit": "cz",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
 }

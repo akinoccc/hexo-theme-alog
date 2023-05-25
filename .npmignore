@@ -1,0 +1,11 @@
+.github/**
+.husky/**
+.vscode/**
+.gitignore
+.npmrc
+.releaserc
+commitlint.config.js
+LICENSE
+package-lock.json
+README.md
+README.zh-CN.md

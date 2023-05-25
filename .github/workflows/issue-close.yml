@@ -1,0 +1,19 @@
+name: Check Need Info
+
+on:
+  schedule:
+    - cron: '0 0 */7 * *'
+
+jobs:
+  check-need-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Close-issues
+        uses: actions-cool/issues-helper@v2
+        with:
+          actions: 'close-issues'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          labels: 'need more info, need reproduce'
+          inactive-day: 7
+          body: |
+            The issue doesn't provide enough information to properly address and close the issue.
