@@ -19,6 +19,14 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
+      
+      - name: Using Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18
+
+      - name: Install Deps
+        run: npm i
 
       - name: Pubilsh
         env:

@@ -9,3 +9,5 @@ LICENSE
 package-lock.json
 README.md
 README.zh-CN.md
+
+node_modules/**
