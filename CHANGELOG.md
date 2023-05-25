@@ -1,4 +1,4 @@
-# [0.1.0](https://github.com/FE-Alog/hexo-theme-alog/compare/v0.0.5...v0.1.0) (2023-05-25)
+# [1.1.0](https://github.com/FE-Alog/hexo-theme-alog/compare/v0.0.5...v1.1.0) (2023-05-25)
 
 
 ### Features
