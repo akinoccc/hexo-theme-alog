@@ -1,4 +1,4 @@
-<% if(theme.valine && theme.valine.enable) { %>
+<% if(theme.comment) { %>
 <% if(show_divide) { %>
 <div class="divide"></div>
 <% } %>
@@ -6,17 +6,40 @@
 <div class="iconfont icon-comment"><span><%= __("comment.header_title") %></span></div>
 <% } %>
 <div id="comment" class="comment markdown"></div>
+<% if(theme.comment.use === 'valine') { %>
+<%- js({ src: "js/lib/valine.min.js" }) %>
 <script>
   new Valine({
     el: '#comment',
-    appId: '<%= theme.valine.appId %>',
-    appKey: '<%= theme.valine.appKey %>',
-    avatar: '<%= theme.valine.avatar %>',
-    placeholder: '<%= theme.valine.placeholder %>',
-    pageSize: <%- theme.valine.pageSize %>,
-    visitor: <%= theme.valine.visitor %>,
-    recordIP: <%= theme.valine.recordIP %>,
+    appId: '<%= theme.comment.valine.appId %>',
+    appKey: '<%= theme.comment.valine.appKey %>',
+    avatar: '<%= theme.comment.valine.avatar %>',
+    placeholder: '<%= theme.comment.valine.placeholder %>',
+    pageSize: Number('<%= theme.comment.valine.pageSize %>'),
+    visitor: Boolean('<%= theme.comment.valine.visitor %>'),
+    recordIP: Boolean('<%= theme.comment.valine.recordIP %>'),
     lang: "<%= config.language %>"
   });
 </script>
+<% } else if(theme.comment.use === 'waline') { %>
+<script>
+  import {
+    init
+  } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+  init({
+    el: '#comment',
+    serverURL: '<%= theme.comment.waline.serverURL %>'
+  });
+</script>
+<% } else if(theme.comment.use === 'twikoo') { %>
+<script>
+  twikoo.init({
+    envId: '<%= theme.comment.twikoo.envId %>', // 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
+    el: '#comment', // 容器元素
+    region: '<%= theme.comment.twikoo.region %>', // 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
+    // path: location.pathname, // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
+    lang: '<%= config.language %>', // 用于手动设定评论区语言，支持的语言列表 https://github.com/imaegoo/twikoo/blob/main/src/client/utils/i18n/index.js
+  })
+</script>
+<% } %>
 <% } %>

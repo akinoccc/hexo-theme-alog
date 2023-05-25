@@ -69,6 +69,19 @@ links:
       link: https://akino.icu
       desc: Akino's blog.
 
+page_header: 
+  type: letter # 模板文件名
+  platforms: # 自定义的page header将在哪些设备端上展示，不展示自定义header的设备端将使用默认的page header
+   - pc
+   - mobile
+  apply_pages: # 应用到哪些页面(布局)
+    - message
+  title: Message # 可选配置项，根据自己需求
+  content:
+    - First line
+    - Second line
+    - ...
+
 footer:
   enable: true
   building_time: 2023 # 建站时间
@@ -81,16 +94,21 @@ loading:
 busuanzi:
   enable: true
 
-# 配置详见valine官方文档: https://valine.js.org/
-valine:
-  enable: true
-  appId: your app id
-  appKey: your app key
-  avatar: avatar style
-  placeholder: xxx # 评论输入框占位文字
-  pageSize: 10 # 评论列表每一页的评论数量
-  visitor: false # 文章阅读次数统计
-  recordIP: true
+comment:
+  use: valine # valine | waline | twikoo
+  valine: # 配置详见valine官方文档: https://valine.js.org/
+    appId: your app id
+    appKey: your app key
+    avatar: avatar style
+    placeholder:  xxx # 评论输入框占位文字
+    pageSize: 10 # 评论列表每一页的评论数量
+    visitor: true # 文章阅读次数统计
+    recordIP: true
+  waline: # 配置详见waline官方文档: https://waline.js.org/
+    serverURL: # 部署 url
+  twikoo: # 配置详见twikoo官方文档: https://twikoo.js.org/
+    envId: # 腾讯云填 env id，Vercel填部署的 server url
+    region: ap-shanghai # default: ap-shanghai
 
 # 本地搜索依赖hexo-generator-searchdb，在使用前请先安装该依赖
 local_search:
@@ -176,6 +194,35 @@ highlight:
   enable: false
 ```
 
+### 自定义页面头部
+
+如果页面布局包含页面头部，你可以重写头部。
+
+#### 添加自定义页面头部模板
+
+在 `alog/layout/_partial/page_headers/` 目录下，你可以添加你的头部模板，并通过主题配置来使用它。
+
+**主题除了默认头部外，另外内置了 `letter` 页面头部，可直接通过配置使用。**
+
+#### 配置
+```yml
+# _config.alog.yml
+page_header: 
+  use: letter # 自定义的 ejs 文件名
+  platforms: # 将显示在哪些平台上。选项: mobile 和 pc
+   - pc
+   - mobile
+  apply_pages: # 将应用于哪些页面
+    - message
+  title: Message # 可选项
+  content:
+    - 第一行
+    - 第二行
+    - ...
+```
+
+请根据上述文档中的指示进行自定义页面头部的设置。
+
 ## 贡献
 
-欢迎提`issue`或者`PR`到这个主题
+欢迎提`issue`或者`PR`到这个主题。
