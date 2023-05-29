@@ -33,4 +33,4 @@ jobs:
           GIT_COMMITTER_EMAIL: materialgithubbot@gmail.com
           GIT_COMMITTER_NAME: release-bot
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release
+        run: npm run release

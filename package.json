@@ -27,6 +27,7 @@
   "homepage": "https://github.com/FE-Alog/hexo-theme-alog#readme",
   "scripts": {
     "commit": "cz",
+    "release": "npx semantic-release",
     "prepare": "husky install"
   },
   "devDependencies": {
