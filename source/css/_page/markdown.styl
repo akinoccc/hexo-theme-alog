@@ -8,9 +8,6 @@
     line-height: inherit
     color: inherit
 
-  p:has(img)
-    flex-box(column, space-around, center)
-
   h1, h2, h3, h4, h5, h6
     display: flex
     align-items: center
@@ -67,6 +64,8 @@
     max-width: 100%
     max-height: 100%
     margin: 10px 0
+    // margin-left: 50%
+    // transform: translateX(-50%)
     object-fit: contain
     cursor: pointer
 
@@ -75,24 +74,21 @@
     padding: 4px 10px
     border-left: 6px solid #6482f8
     background-color: #434343
+    // p
+    //   color: $whitesmoke
 
-  table
-    th, td
-      padding: 4px 15px
-      border: 1px solid #ffffff
-
-  // custom container
+  // 自定义提示容器样式（提示、成功、警告、危险），可自行修改相关样式
   .info, .tips, .success, .warning, .danger
     margin: 10px 0
     padding: 4px 10px
     border-radius: 4px
-    color: $black-dim
+    color: $black-lighter
   .info
-    background-color: rgb(141, 141, 141)
+    background-color: rgb(194, 194, 194)
     border-left: 6px solid rgb(101, 101, 101)
   .tips
-    background-color: rgb(127, 167, 194)
-    border-left: 6px solid rgb(44, 160, 237)
+    background-color: rgb(186, 226, 252)
+    border-left: 6px solid rgb(52, 152, 219)
   .success
     background-color: rgb(202, 255, 231)
     border-left: 6px solid rgb(66, 185, 131)

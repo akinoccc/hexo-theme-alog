@@ -46,8 +46,6 @@ theme: alog
 Create a configuration file with the name `_config.alog.yml` at the blog root and copy the following configuration to this file.
 
 ```yml
-logo: your logo path
-
 menu:
   - name: Home
     path: /
@@ -72,7 +70,6 @@ links:
       link: https://akino.icu
       desc: Akino's blog.
 
-# Supported in version 1.1.0 and above.
 page_header: 
   type: letter # custom ejs filename
   platforms: # which platform will be displayed. options: mobile and pc
@@ -124,13 +121,6 @@ local_search:
 ```
 
 ## Usage
-
-### Logo setting
-
-```yml
-# _config.alog.yml
-logo: your logo path
-```
 
 ### Menu
 
@@ -206,7 +196,7 @@ highlight:
   enable: false
 ```
 
-### Custom Page Header `v1.1.0`
+### Custom Page Header
 
 if the page layout has page header, you can rewrite the header. 
 
