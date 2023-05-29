@@ -1,10 +1,11 @@
-import BgAnimation from "./page/bg-animation.js";
-import CodeBlock from "./page/codeblock.js";
+import BgAnimation from './page/bg-animation.js';
+import CodeBlock from './page/codeblock.js';
+import ThemeController from './theme.js';
 
 $(function () {
+  new ThemeController();
   new BgAnimation();
   new CodeBlock();
-
   // let pjax = new Pjax({
   //   elements: "a",
   //   selectors: [".page-container"],//填写要改变的部分，标签直接写标签名，id选择器需要加#，类名需要加.

@@ -45,6 +45,8 @@ theme: alog
 
 ```yml
 # _config.alog.yml
+logo: logo 路径
+
 menu:
   - name: Home
     path: /
@@ -69,6 +71,7 @@ links:
       link: https://akino.icu
       desc: Akino's blog.
 
+# v1.1.0
 page_header: 
   type: letter # 模板文件名
   platforms: # 自定义的page header将在哪些设备端上展示，不展示自定义header的设备端将使用默认的page header
@@ -119,6 +122,13 @@ local_search:
 ```
 
 ## 使用
+
+### Logo 设置
+
+```yml
+# _config.alog.yml
+logo: logo 路径
+```
 
 ### 菜单及导航
 
@@ -194,7 +204,7 @@ highlight:
   enable: false
 ```
 
-### 自定义页面头部
+### 自定义页面头部 `v1.1.0`
 
 如果页面布局包含页面头部，你可以重写头部。
 

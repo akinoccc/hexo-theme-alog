@@ -32,10 +32,10 @@
       position: absolute
       bottom: 20px
       padding: 20px 30px
-      background-color: $whitesmoke
+      background-color: get-css-var("color", "on-background")
       border-radius: 16px;
-      box-shadow: 2px 5px 10px $black;
-      transition: all 1s ease
+      box-shadow: 2px 5px 10px get-css-var("color", "background");
+      transition: all 1s
       color: $black-dim
       text-align: center
       p {
@@ -70,7 +70,7 @@
       background-position: center 0
       background-repeat: no-repeat
       background-size: 100% auto
-      transition: all 1s ease
+      transition: all 1s
     }
     .envelope__bg {
       background-image: url(/images/envelope-bg.png)
