@@ -6,6 +6,11 @@ on:
 
 jobs:
   check-inactive:
+    permissions:
+      contents: write
+      id-token: write
+      issues: write
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - name: check-inactive
