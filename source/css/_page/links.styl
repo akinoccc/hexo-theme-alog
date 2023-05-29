@@ -1,16 +1,17 @@
 .page-link-container 
   padding: $page-padding
+  // background-color: get-css-var("color", "secondary-container-high")
   .card
     min-width: 250px
     padding: 25px
     margin-bottom: 25px
     border-radius: $border-radius-base
-    background-color: $black-dim
+    background-color: get-css-var("color", "secondary-container-highest")
     .site-info
       margin: 25px 0
       padding: 15px 20px
       border-radius: $border-radius-base
-      background-color $black-light
+      background-color get-css-var("color", "secondary-container-low")
       word-break: break-all
     .friend-link-list
       display: grid

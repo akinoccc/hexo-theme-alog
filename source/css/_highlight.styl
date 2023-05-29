@@ -4,133 +4,136 @@
   margin: 15px 0
   box-sizing: content-box
   border-radius: $border-radius-base
-  box-shadow: 0 5px 10px 0 rgb(0, 0, 0, 0.4)
+  box-shadow: 0 0 2px 0 get-css-var("color", "secondary-fixed-dim")
 
-  .highlight-tool
-    display: flex
-    align-items: center
-    width: 100%
-    height: 35px
-    padding: 1em
-    background-color: #161616
+.highlight-tool
+  display: flex
+  align-items: center
+  width: 100%
+  height: 35px
+  padding: 1em
+  background-color: get-css-var("color", "secondary-container")
+  
+  span:not(.language)
+    width: 10px
+    height: 10px
+    border-radius: 50%
+    margin-right: 5px
     
-    span:not(.language)
-      width: 10px
-      height: 10px
-      border-radius: 50%
-      margin-right: 5px
-    span:nth-child(1)
-      background: red
-      animation: flash 2s 0s infinite
-    span:nth-child(2) 
-      background: sandybrown
-      animation: flash 2s 0.2s infinite
-    span:nth-child(3)
-      background: limegreen
-      animation: flash 2s 0.4s infinite
+  span:nth-child(1)
+    background: red
+    animation: flash 2s 0s infinite
 
-    @keyframes flash
-      50% 
-        opacity: 0.2
-        transform: scale(1.1)
+  span:nth-child(2) 
+    background: sandybrown
+    animation: flash 2s 0.2s infinite
 
-    .language
-      margin-left: 5px
-      font-size: 1.2rem
-      font-weight: $blod
+  span:nth-child(3)
+    background: limegreen
+    animation: flash 2s 0.4s infinite
 
-    .iconfont
-      position: absolute
-      font-weight: $blod
-      cursor: pointer
+  @keyframes flash
+    50% 
+      opacity: 0.2
+      transform: scale(1.1)
 
-    .icon-copy
-    .icon-success
-    .icon-close
-      right: 2.5em
+  .language
+    margin-left: 5px
+    font-size: 1.2rem
+    font-weight: $blod
 
-    .icon-success
-      color: #60c848
+  .iconfont
+    position: absolute
+    font-weight: $blod
+    cursor: pointer
 
-    .icon-close
-      color: #e63847
+  .icon-copy
+  .icon-success
+  .icon-close
+    right: 2.5em
 
-    .icon-chevron-bottom 
-      right: 1em
-      transform: rotateZ(0deg)
-      transition: all 0.5s
+  .icon-success
+    color: #60c848
 
-    .collapse-btn-rotate
-      transform: rotateZ(90deg)
+  .icon-close
+    color: #e63847
 
-  pre
-    overflow-y: hidden
-    margin: 0 
-    padding: 0.8em
+  .icon-chevron-bottom 
+    right: 1em
+    transform: rotateZ(0deg)
     transition: all 0.5s
 
-  .hljs 
-    overflow-x: auto
-    display: block
-    width: 100%
-    white-space: pre
-    color: #abb2bf
+  .collapse-btn-rotate
+    transform: rotateZ(90deg)
 
-  .hljs-comment
-  .hljs-quote 
-    color: #5c6370
-    font-style: italic
+pre
+  overflow-y: hidden
+  margin: 0 
+  padding: 0.8em
+  transition: all 0.5s
 
-  .hljs-doctag
-  .hljs-keyword
-  .hljs-formula
-    color: #c678dd
+.hljs 
+  overflow-x: auto
+  display: block
+  width: 100%
+  white-space: pre
+  color: get-css-var("color", "on-secondary-container")
 
-  .hljs-section
-  .hljs-name
-  .hljs-selector-tag
-  .hljs-deletion
-  .hljs-subst 
-    color: #e06c75
+.hljs-comment
+.hljs-quote 
+  color: get-css-var("color", "secondary-fixed")
+  font-style: italic
 
-  .hljs-literal
-    color: #56b6c2
+.hljs-doctag
+.hljs-keyword
+.hljs-formula
+  color: #d45ef8
 
-  .hljs-string
-  .hljs-regexp
-  .hljs-addition
-  .hljs-attribute
-  .hljs-meta .hljs-string 
-    color: #98c379
+.hljs-section
+.hljs-name
+.hljs-selector-tag
+.hljs-deletion
+.hljs-subst 
+  color: #ea4b58
 
-  .hljs-attr
-  .hljs-variable
-  .hljs-template-variable
-  .hljs-type
-  .hljs-selector-class
-  .hljs-selector-attr
-  .hljs-selector-pseudo
-  .hljs-number 
-    color: #d19a66
+.hljs-literal
+  color: #0d9aa7
 
-  .hljs-symbol
-  .hljs-bullet
-  .hljs-link
-  .hljs-meta
-  .hljs-selector-id
-  .hljs-title
-    color: #61aeee
+.hljs-string
+.hljs-regexp
+.hljs-addition
+.hljs-attribute
+.hljs-meta .hljs-string 
+  color: #7ec948
 
-  .hljs-built_in
-  .hljs-title .class_
-  .hljs-class .hljs-title
-    color: #e6c07b
+.hljs-attr
+.hljs-variable
+.hljs-template-variable
+.hljs-type
+.hljs-selector-class
+.hljs-selector-attr
+.hljs-selector-pseudo
+.hljs-number 
+  color: #f09c4e
 
-  .hljs-emphasis
-    font-style: italic
+.hljs-symbol
+.hljs-bullet
+.hljs-link
+.hljs-meta
+.hljs-selector-id
+.hljs-title
+  color: #52acf5
 
-  .hljs-strong
-    font-weight: bold
+.hljs-built_in
+.hljs-title .class_
+.hljs-class .hljs-title
+  color: #c79a45
 
-  .hljs-link
-    text-decoration: underline
+.hljs-emphasis
+  font-style: italic
+
+.hljs-strong
+  font-weight: bold
+
+.hljs-link
+  text-decoration: underline
