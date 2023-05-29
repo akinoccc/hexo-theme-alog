@@ -1,3 +1,11 @@
+## [1.2.2](https://github.com/FE-Alog/hexo-theme-alog/compare/v1.2.1...v1.2.2) (2023-05-29)
+
+
+### Performance Improvements
+
+* **comments:** [valine] improve style for submit btn ([e131512](https://github.com/FE-Alog/hexo-theme-alog/commit/e131512e73e5caffe9a93f428016b974f3533620))
+* **comments:** [valine] support all config fields ([92aaa52](https://github.com/FE-Alog/hexo-theme-alog/commit/92aaa52cab33228312e4c799c4b2b2556f42da76))
+
 ## [1.2.1](https://github.com/FE-Alog/hexo-theme-alog/compare/v1.2.0...v1.2.1) (2023-05-29)
 
 

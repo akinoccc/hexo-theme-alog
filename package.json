@@ -1,7 +1,7 @@
 {
   "name": "hexo-theme-alog",
   "private": false,
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Alog is a simple and elegant hexo theme.",
   "files": [
     "languages/**/*",
