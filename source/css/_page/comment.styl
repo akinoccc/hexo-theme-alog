@@ -1,6 +1,6 @@
 .divide
   margin: 40px 0
-  border-top: 2px dashed get-css-var("color", "secondary-fixed")
+  border-top: 2px dashed $grey-light
 .icon-comment
   font-size: 2rem
   font-weight: $blod
@@ -9,19 +9,17 @@
 .comment
   size: 100% auto
   margin-top: 20px
-  .vinput, 
-  .vbtn
-  .vcontent > p
-      color: get-css-var("color", "on-secondary-container") !important
+  .vpower
+    display: none
   .vinput
     &:focus
-      border-color: get-css-var("color", "primary-0") !important
+      border-color: $orange !important
   .vat
   .vnick:hover
-    color: get-css-var("color", "primary-0") !important
+    color: $orange !important
   .vbtn
     &:hover
-      color: get-css-var("color", "primary-0") !important
-      border-color: get-css-var("color", "primary-0") !important
+      color: $orange !important
+      border-color: $orange !important
   .actived
-    fill: get-css-var("color", "primary-0") !important
+    fill: $orange !important

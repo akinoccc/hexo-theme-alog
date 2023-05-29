@@ -4,7 +4,7 @@
   visibility: hidden
   width: 100vw
   height: 100vh
-  background-color: rgba(44, 44, 44, 0.8)
+  background-color: rgba(44, 44, 44, 0.7)
 
   .menu
     overflow-y: auto
@@ -12,10 +12,9 @@
     size: 280px 100%
     max-height: 100%
     padding: 60px 20px
-    background-color: get-css-var("color", "secondary-container-highest")
+    background-color: $black
     .active
-      border: 1px solid get-css-var("color", "primary-0")
-      border-right-width: 6px
+      border-right: 6px solid $orange
     .category-menu-wrapper
       overflow: hidden
       .menu-item-name
@@ -30,13 +29,12 @@
         padding: 0 15px
         transition: all 0.8s
         .active
-          background-color: get-css-var("color", "secondary-container-high")
+          background-color: $black
     .category-expand 
       .menu-item-name
         .iconfont
           transform: rotateZ(180deg)
       .category-menu-list
-        overflow-y: scroll
         max-height: 500px
 
     li
@@ -45,14 +43,14 @@
     li:not([class~='iconfont'])
       margin-bottom: 10px
       border-radius: 6px
-      background-color: get-css-var("color", "secondary-container-high")
+      background-color: $black-deep
       a
         display: block
         padding: 15px 15px
 
 
-    li:not([class~="category-menu-wrapper"]):not([class~='iconfont']):hover
-      background-color: get-css-var("color", "secondary-container")
+    li:not([class~='category-menu-wrapper']):hover
+      background-color: $black-deeper
 
     .icon-close-circle
       position: absolute

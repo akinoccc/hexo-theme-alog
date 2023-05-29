@@ -27,11 +27,9 @@ select
 *
   box-sizing: border-box
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-  // -webkit-user-select: none;
+  -webkit-user-select: none;
   -moz-user-focus: none;
-  // -moz-user-select: none;
-  transition: background-color 0.3s;
-  transition-timing-function: ease
+  -moz-user-select: none;
 
 html
 body 
@@ -42,8 +40,8 @@ html
   font-size: 10px
 
 body
-  background-color: get-css-var("color", "background")
-  color: get-css-var("color", "on-secondary-container")
+  background-color: #111111
+  color: $whitesmoke
   font-size: 1.4rem
   // font-family: 'Microsoft YaHei'
 
@@ -57,10 +55,10 @@ img
 
 a
   text-decoration: none
-  color: get-css-var("color", "on-background") 
+  color: $whitesmoke 
 
 p
-  color: get-css-var("color", "on-background") 
+  color: $whitesmoke 
 
 table
   border-collapse: collapse

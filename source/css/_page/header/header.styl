@@ -11,8 +11,8 @@
   min-height: 60px
   // aspect-ratio: 22
   padding: 10px 6%
-  box-shadow: 0 2px 12px 1px get-css-var("color", "secondary-fixed")
-  background-color: get-css-var("color", "secondary-container-highest")
+  box-shadow: 0 2px 10px 4px $black-deep
+  background-color: $black
 
   /* blogger info */
   .blogger-info 
@@ -34,7 +34,7 @@
       border-radius: 2px
       cursor: pointer
       &:not(.menu-category):hover 
-        background-color: get-css-var("color", "secondary-container")
+        background-color: #272727
     a 
       display: block
       padding: 10px
@@ -48,15 +48,16 @@
           display: block
       .iconfont 
         transform: rotateZ(0)
+        transition: all 0.2s
       .category-menu-list 
         position: absolute
         left: 50%
         top: 40px
         display: none
         padding: 10px 0
-        border: 1px solid get-css-var("color", "secondary-fixed")
+        border: 1px solid #272727
         border-radius: 6px
-        background-color: get-css-var("color", "secondary-container-highest")
+        background-color: rgba(0, 0, 0, 0.9)
         transform: translateX(-50%)
         &::before 
           content: ''
@@ -66,13 +67,13 @@
           width: 0
           height: 0
           border: 6px solid
-          border-color: transparent transparent get-css-var("color", "secondary-fixed") transparent
+          border-color: transparent transparent #272727 transparent
           transform: translateX(-50%)
         a 
           padding: 8px 20px
           word-break: keep-all
       .category-menu-list-item:hover 
-        background-color: get-css-var("color", "secondary-container")
+        background-color: rgba(39, 39, 39, 0.7)
     .active:not(.category-menu-list-item):after 
       content: ''
       position: absolute
@@ -81,7 +82,7 @@
       size: 75% 3px
       transform: translateX(-50%)
       border-radius: 4px
-      background-color: get-css-var("color", "primary-0")
+      background-color: $orange
 
   /* right icon */
   .right-icon 
@@ -93,13 +94,10 @@
     .icon-view-list 
       display: none
 
-.scrolled
-  background-color: get-css-var("color", "secondary-container-high")
-
 .active 
   position: relative
   a 
-    color: get-css-var("color", "primary-0")
+    color: $orange
 
 @media only screen and (max-width: 1000px) 
   .main-header .menu 
