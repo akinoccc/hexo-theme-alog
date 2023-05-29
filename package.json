@@ -36,7 +36,8 @@
     "@semantic-release/git": "^10.0.1",
     "commitizen": "^4.2.5",
     "cz-conventional-changelog": "^3.3.0",
-    "husky": "^8.0.1"
+    "husky": "^8.0.1",
+    "semantic-release": "^21.0.2"
   },
   "config": {
     "commitizen": {
