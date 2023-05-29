@@ -10,12 +10,13 @@
 .post-list-wrapper 
   size(100%, auto)
   padding: $page-padding
-
+  
 .post-list 
   display: grid
   grid-template-columns: 1fr 1fr 1fr 1fr
   grid-row-gap: 20px
   grid-column-gap: 20px
+    
   .top::before
     size(40px)
     content: ''
@@ -31,8 +32,8 @@
     overflow: hidden
     position: relative
     border-radius: $border-radius-base
-    box-shadow: 0 0 1px 1px #222222
-    background-color: $black-deep
+    box-shadow: 1px 1px 14px 0 get-css-var("color", "secondary-fixed-variant")
+    background-color: get-css-var("color", "secondary-container-highest")
     .post-cover-wrapper 
       size(100%, auto)
       overflow: hidden
@@ -64,13 +65,14 @@
       flex-box(column, space-between)
       flex: 1
       padding: 12px 16px
+      border-top: 1px solid get-css-var("color", "secondary-fixed-variant")
       .top-box 
         .post-title 
           muti-colum-ellipsis()
           font-size: 1.8rem
           font-weight: $blod
           &:hover 
-            color: $orange
+            color: get-css-var("color", "primary-0")
         .post-desc 
           ellipsis()
           margin-top: 8px
@@ -84,18 +86,18 @@
           flex-box(center, center)
           margin-right: 6px
           padding: 4px 8px
-          border-radius: 4px
-          background-color: rgba(46, 75, 111, 0.5)
+          background-color: rgba(#6482f8, 0.2)
           border-radius: 2px
+          border: 1px solid get-css-var("color", "tertiary-0")
           transition: all 0.4s
           cursor: pointer
           .post-category-list-link 
-            color: $purple
+            color: get-css-var("color", "tertiary-0")
             font-size: 1.2rem
           &:hover 
-            background-color: $purple
+            background-color: get-css-var("color", "tertiary-0")
             .post-category-list-link 
-              color: $whitesmoke
+              color: get-css-var("color", "secondary-20")
       .uncategoried
         display: inline-block
         margin-bottom: 10px
