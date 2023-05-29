@@ -30,6 +30,8 @@ select
   -webkit-user-select: none;
   -moz-user-focus: none;
   -moz-user-select: none;
+  transition: background-color 0.3s;
+  transition-timing-function: ease
 
 html
 body 
@@ -40,8 +42,8 @@ html
   font-size: 10px
 
 body
-  background-color: #111111
-  color: $whitesmoke
+  background-color: get-css-var("color", "background")
+  color: get-css-var("color", "on-secondary-container")
   font-size: 1.4rem
   // font-family: 'Microsoft YaHei'
 
@@ -55,10 +57,10 @@ img
 
 a
   text-decoration: none
-  color: $whitesmoke 
+  color: get-css-var("color", "on-background") 
 
 p
-  color: $whitesmoke 
+  color: get-css-var("color", "on-background") 
 
 table
   border-collapse: collapse

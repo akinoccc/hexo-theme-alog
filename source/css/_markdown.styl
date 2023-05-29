@@ -1,7 +1,7 @@
 .markdown 
   line-height: 1.85
   a
-    color: $orange
+    color: get-css-var("color", "primary-0")
 
   p
     margin: 8px 0
@@ -15,7 +15,7 @@
     display: flex
     align-items: center
     margin: 0
-    color: $whitesmoke
+    color: get-css-var("color", "on-secondary-container")
   h2, h3
     position: relative
     padding-left: 14px
@@ -35,14 +35,13 @@
     left: 0
     width: 6px
     border-radius: 2px
+    background-color: get-css-var("color", "primary-0")
   h2::before
     top: 7px
     height: 18px
-    background-color: $orange
   h3::before 
     top: 6px
     height: 14px
-    background-color: #ff6f31
   // h1:target
   // h2:target 
   // h3:target 
@@ -73,35 +72,35 @@
   blockquote
     margin: 10px 0
     padding: 4px 10px
-    border-left: 6px solid #6482f8
-    background-color: #434343
+    border-left: 6px solid get-css-var("color", "tertiary-0")
+    background-color: get-css-var("color", "secondary-container-low")
 
   table
     th, td
       padding: 4px 15px
-      border: 1px solid #ffffff
+      border: 1px solid get-css-var("color", "on-inverse-secondary-container")
 
   // custom container
   .info, .tips, .success, .warning, .danger
     margin: 10px 0
     padding: 4px 10px
     border-radius: 4px
-    color: $black-dim
+    color: get-css-var("color", "secondary-3")
   .info
-    background-color: rgb(141, 141, 141)
-    border-left: 6px solid rgb(101, 101, 101)
+    background-color: #c2c2c2
+    border-left: 6px solid #656565
   .tips
-    background-color: rgb(127, 167, 194)
-    border-left: 6px solid rgb(44, 160, 237)
+    background-color: #9dd8ff
+    border-left: 6px solid #2ca0ed
   .success
-    background-color: rgb(202, 255, 231)
-    border-left: 6px solid rgb(66, 185, 131)
+    background-color: #baffe0
+    border-left: 6px solid #42b983
   .warning
-    background-color: rgb(255, 247, 208)
-    border-left: 6px solid rgb(231, 192, 0)
+    background-color: #feefa6
+    border-left: 6px solid #e7c000
   .danger
-    background-color: rgb(255, 230, 230)
-    border-left: 6px solid rgb(204, 0, 0)
+    background-color: #ffb9b9
+    border-left: 6px solid #cc0000
 
 
 

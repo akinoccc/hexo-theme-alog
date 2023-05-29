@@ -1,11 +1,13 @@
 .page-footer
   flex-box(column, center, center)
   size(auto, 60px)
+  padding: 10px 0
+  box-sizing: content-box
   p
     text-align: center
     color: $grey-light
     font-size: 1.2rem
     margin-bottom: 6px
     a
-      color: $gainsboro
-      border-bottom: 1px solid $gainsboro
+      color: get-css-var("color", "on-secondary-container")
+      border-bottom: 1px solid get-css-var("color", "on-secondary-container")
