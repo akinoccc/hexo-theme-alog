@@ -8,12 +8,17 @@ on:
 
 jobs:
   add-assigness:
+    permissions:
+      contents: write
+      id-token: write
+      issues: write
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
-      - uses: akinocccc/selected-collaborators@v1.1.1
+      - uses: amazing-actions/selected-collaborators@v1.1.1
         id: candidate
         with:
-          token: ${{ secrets.GH_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: wow-actions/auto-assign@v3
         with:
