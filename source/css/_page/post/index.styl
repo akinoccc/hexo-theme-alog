@@ -11,13 +11,13 @@
     max-width: 100%
     padding: 25px
     border-radius: 10px
-    background: get-css-var("color", "secondary-container-highest")
-    color: get-css-var("color", "on-secondary-container")
+    background: #272727
+    color: $whitesmoke
     .post-header
       flex-box(column)
       width: 100%
       padding-bottom: 10px
-      border-bottom: 1px dashed get-css-var("color", "secondary-fixed")
+      border-bottom: 1px solid $grey-dark
 
       .post-cover
         width: 100%
@@ -58,24 +58,24 @@
             justify-content: center
             margin-right: 2px
             padding: 2px 6px
-            background-color: rgba(#6482f8, 0.2)
-            border: 1px solid get-css-var("color", "tertiary-0")
+            border: 1px solid $purple
             border-radius: 2px
-            opacity: 0.8
-            transition: all 0.4s
+            background-color: rgba(46, 75, 111, 0.5)
+            transition: all 0.5s
             transform: scale(0.9)
             .category-list-link 
-              color: get-css-var("color", "tertiary-0")
-              font-size: 1.2rem
+              color: $purple
+              font-size: 12px
           .category-list-item:hover
-            background-color: get-css-var("color", "tertiary-0")
+            background-color: $purple
             .category-list-link
-              color: get-css-var("color", "secondary-20")
+              color: $whitesmoke
 
     .post-content
       position: relative
       size: 100% auto
       margin: 20px 0
+      color: $grey-lighter
  
     .tags
       display: flex
@@ -87,17 +87,17 @@
         justify-content: center
         margin-right: 10px
         padding: 4px 10px
-        border: 1px solid get-css-var("color", "primary-0")
+        border: 1px solid $orange
         border-radius: 12px
         background-color: rgba(255, 212, 103, 0.2)
         transition: all 0.4s
         .tag-link
-          color: get-css-var("color", "primary-0")
+          color: $orange
           font-size: 1.2rem
       .tag:hover
-        background-color: get-css-var("color", "primary-0")
+        background-color: $orange
         .tag-link
-          color: get-css-var("color", "on-secondary-container")
+          color: $whitesmoke
 
 
 @media only screen and (max-width: 500px) 

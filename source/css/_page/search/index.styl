@@ -13,9 +13,9 @@
     margin: 10% auto 0
     padding: 0 20px 20px
     border-radius: $border-radius-base
-    background-color: get-css-var("color", "secondary-container-highest")
+    background-color: $black-deep
     box-sizing: content-box
-    color: get-css-var("color", "on-secondary-container")
+    color: $grey-lighter
     .search-header
       .search-title 
         flex-box(row, space-between, center)
@@ -29,8 +29,8 @@
           size: 100% 50px
           padding: 10px
           border-radius: $border-radius-base
-          background-color: get-css-var("color", "secondary-container-high")
-          color: get-css-var("color", "on-secondary-container")
+          background-color: $black-light
+          color: $grey-lighter
           font-size: 16px
           // &::-webkit-search-cancel-button
             // background: url("custome-clear.png") no-repeat center;
@@ -39,7 +39,7 @@
     .search-result-container
       margin-top: 10px
       border-radius: $border-radius-base
-      background-color: get-css-var("color", "secondary-container")
+      background-color: $black-dim
       hr
         margin: 0
       .search-stats
@@ -54,7 +54,7 @@
         li
           padding: 8px 0
           &:hover
-            color: get-css-var("color", "on-secondary-container")
+            color: $whitesmoke
           &:not(:last-child)
             border-bottom: 1px dashed #dddddd
           .search-result-title
@@ -97,6 +97,5 @@
         height: calc(100% - 100px)
         margin-top: 0
         border-radius: 0
-        background-color transparent
         .search-result-list
           height: calc(100% - 50px)

@@ -1,8 +1,11 @@
 @font-face {
   font-family: 'iconfont'; /* Project id 3840486 */
-  src: url('../../iconfont/iconfont.woff2') format('woff2'),
-    url('../../iconfont/iconfont.woff') format('woff'),
-    url('../../iconfont/iconfont.ttf') format('truetype');
+  src: url('//at.alicdn.com/t/c/font_3840486_fxmlcfbarvi.woff2?t=1674903266914')
+      format('woff2'),
+    url('//at.alicdn.com/t/c/font_3840486_fxmlcfbarvi.woff?t=1674903266914')
+      format('woff'),
+    url('//at.alicdn.com/t/c/font_3840486_fxmlcfbarvi.ttf?t=1674903266914')
+      format('truetype');
 }
 
 .iconfont {
@@ -11,14 +14,6 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-dark:before {
-  content: '\e666';
-}
-
-.icon-light:before {
-  content: '\e697';
 }
 
 .icon-toc:before {
