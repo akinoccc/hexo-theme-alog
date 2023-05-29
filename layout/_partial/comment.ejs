@@ -11,14 +11,8 @@
 <script>
   new Valine({
     el: '#comment',
-    appId: '<%= theme.comment.valine.appId %>',
-    appKey: '<%= theme.comment.valine.appKey %>',
-    avatar: '<%= theme.comment.valine.avatar %>',
-    placeholder: '<%= theme.comment.valine.placeholder %>',
-    pageSize: Number('<%= theme.comment.valine.pageSize %>'),
-    visitor: Boolean('<%= theme.comment.valine.visitor %>'),
-    recordIP: Boolean('<%= theme.comment.valine.recordIP %>'),
-    lang: "<%= config.language %>"
+    lang: "<%= config.language %>",
+    ...JSON.parse('<%- JSON.stringify(theme.comment.valine) %>')
   });
 </script>
 <% } else if(theme.comment.use === 'waline') { %>
