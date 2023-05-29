@@ -12,7 +12,7 @@
         padding: 20px
         margin-bottom: 20px
         border-radius: 10px
-        background: $black-dim
+        background: get-css-var("color", "secondary-container-highest")
         .aside-card-title
           flex-box(row, flex-start, center)
           padding-bottom: 1.4rem
@@ -46,15 +46,15 @@
         .toc-child li
           padding-left: 16px
         .toc-active
-          background-color: $black-deeper
-          color: $orange
+          background-color: get-css-var("color", "secondary-container-high")
+          color: get-css-var("color", "primary-0")
           &::before
             content: ''
             position: absolute
             top: 0
             left: 0
             size: 4px 100%
-            background-color: $orange
+            background-color: get-css-var("color", "primary-0")
       .latest-posts
         .latest-post-list
           .latest-post
@@ -63,6 +63,8 @@
               flex-box()
               .post-cover
                 size(4em)
+                min-width: 4em
+                min-height: 4em
                 margin-right: 10px
                 object-fit: cover
               .post-info
@@ -72,7 +74,7 @@
                 .time
                   padding: 0.3em 0
                   font-size: 1.2rem
-                  color: $grey
+                  color: get-css-var("color", "secondary-variant")
 
 
 @media only screen and (max-width: 1000px) {

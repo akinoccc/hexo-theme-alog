@@ -1,8 +1,8 @@
 export default class CodeBlock {
   constructor() {
     this._initHighlightStyle();
-    $('.highlight-tool .icon-copy').on('click', this._copyCode);
     $(document).on('mouseup', this._resetCopy);
+    $('.highlight-tool .icon-copy').on('click', this._copyCode);
     $('.highlight-tool .icon-chevron-bottom').on('click', this._collapse);
   }
 
@@ -12,11 +12,11 @@ export default class CodeBlock {
         // contains: TYPES,
         // keywords: LITERALS,
         // illegal: '\\S'
-      }
+      };
     });
     hljs.registerLanguage('react', () => ({}));
     $(document).on('DOMContentLoaded', () => {
-      document.querySelectorAll('pre code').forEach((el) => {
+      document.querySelectorAll('pre code').forEach(el => {
         hljs.highlightElement(el);
       });
     });
@@ -45,24 +45,20 @@ export default class CodeBlock {
     try {
       const text = $(this).parent().next('pre').text();
       navigator.clipboard.writeText(text);
-      $(this)
-        .removeClass('icon-copy')
-        .addClass('icon-success');
+      $(this).removeClass('icon-copy').addClass('icon-success');
     } catch (e) {
-      console.log(e)
-      $(this)
-        .removeClass('icon-copy')
-        .addClass('icon-close');
+      console.log(e);
+      $(this).removeClass('icon-copy').addClass('icon-close');
     }
   }
 
   _resetCopy() {
     $('.highlight-tool .icon-success')
       .removeClass('icon-success')
-      .addClass('icon-copy')
+      .addClass('icon-copy');
     $('.highlight-tool .icon-close')
       .removeClass('icon-close')
-      .addClass('icon-copy')
+      .addClass('icon-copy');
   }
 
   _collapse() {
