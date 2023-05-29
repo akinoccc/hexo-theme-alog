@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/FE-Alog/hexo-theme-alog/compare/v1.2.0...v1.2.1) (2023-05-29)
+
+
+### Bug Fixes
+
+* **layouts:** [links] fix the border of link item not displayed ([#10](https://github.com/FE-Alog/hexo-theme-alog/issues/10)) ([21c6246](https://github.com/FE-Alog/hexo-theme-alog/commit/21c624669b96398838d581202b5bbb0c8b8b584c))
+
 # [1.2.0](https://github.com/FE-Alog/hexo-theme-alog/compare/v1.1.0...v1.2.0) (2023-05-29)
 
 
