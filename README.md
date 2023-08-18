@@ -1,4 +1,5 @@
 # Alog
+![image](https://github.com/FE-Alog/hexo-theme-alog/assets/64176534/86467f72-cc83-473c-844f-30896625c4a8)
 
 > Alog is a simple and elegant hexo theme.
 
