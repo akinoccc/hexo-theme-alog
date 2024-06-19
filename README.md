@@ -15,7 +15,7 @@
 
 ## Live Preview
 
-👉 <a href="https://akino.icu" target="_blank">Akino's blog</a>
+👉 <a href="https://hexo.akino.icu" target="_blank">Akino's blog</a>
 
 ## Installation
 
